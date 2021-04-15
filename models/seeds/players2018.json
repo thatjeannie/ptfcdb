@@ -1,0 +1,300 @@
+{
+    "2018": [
+        {
+            "player": "Adrianna Franch",
+            "number": 24,
+            "positions": [
+                {
+                    "name": "Goalkeeper",
+                    "sides": null
+                }
+            ],
+            "nation": "United States"
+        },
+        {
+            "player": "Britt Eckerstrom",
+            "number": 33,
+            "positions": [
+                {
+                    "name": "Goalkeeper",
+                    "sides": null
+                }
+            ],
+            "nation": "United States"
+        },
+        {
+            "player": "Katherine Reynolds",
+            "number": 2,
+            "positions": [
+                {
+                    "name": "Defender",
+                    "sides": ["Right", "Center"]
+                }
+            ],
+            "nation": "United States"
+        },
+        {
+            "player": "Emily Menges",
+            "number": 4,
+            "positions": [
+                {
+                    "name": "Defender",
+                    "sides": ["Center"]
+                }
+            ],
+            "nation": "United States"
+        },
+        {
+            "player": "Emily Sonnett",
+            "number": 16,
+            "positions": [
+                {
+                    "name": "Defender",
+                    "sides": ["Center"]
+                }
+            ],
+            "nation": "United States"
+        },
+        {
+            "player": "Meghan Klingenberg",
+            "number": 25,
+            "positions": [
+                {
+                    "name": "Defender",
+                    "sides": ["Left"]
+                },
+                {
+                    "name": "Midfielder",
+                    "sides": ["Left"]
+                }
+            ],
+            "nation": "United States"
+        },
+        {
+            "player": "Meg Morris",
+            "number": 32,
+            "positions": [
+                {
+                    "name": "Defender",
+                    "sides": ["Left"]
+                },
+                {
+                    "name": "Forward",
+                    "sides": null
+                }
+            ],
+            "nation": "United States"
+        },
+        {
+            "player": "Elizabeth Ball",
+            "number": 27,
+            "positions": [
+                {
+                    "name": "Defender",
+                    "sides": ["Center, Right"]
+                }
+            ],
+            "nation": "United States"
+        },
+        {
+            "player": "Ellie Carpenter",
+            "number": 15,
+            "positions": [
+                {
+                    "name": "Defender",
+                    "sides": ["Center"]
+                }
+            ],
+            "nation": "Australia"
+        },
+        {
+            "player": "Kelli Hubly",
+            "number": 20,
+            "positions": [
+                {
+                    "name": "Defender",
+                    "sides": ["Center"]
+                }
+            ],
+            "nation": "United States"
+        },
+        {
+            "player": "Lindsey Horan",
+            "number": 10,
+            "positions": [
+                {
+                    "name": "Midfielder",
+                    "sides": ["Center"]
+                }
+            ],
+            "nation": "United States"
+        },
+        {
+            "player": "Andressinha Cavalari",
+            "number": 8,
+            "positions": [
+                {
+                    "name": "Attacking Midfielder",
+                    "sides": ["Center"]
+                }
+            ],
+            "nation": "Brazil"
+        },
+        {
+            "player": "Tobin Heath",
+            "number": 17,
+            "positions": [
+                {
+                    "name": "Forward",
+                    "sides": null
+                },
+                {
+                    "name": "Midfielder",
+                    "sides": ["Left"]
+                }
+            ],
+            "nation": "United States"
+        },
+        {
+            "player": "Celeste Boureille",
+            "number": 30,
+            "positions": [
+                {
+                    "name": "Midfielder",
+                    "sides": null
+                }
+            ],
+            "nation": "United States"
+        },
+        {
+            "player": "Angela Salem",
+            "number": 36,
+            "positions": [
+                {
+                    "name": "Midfielder",
+                    "sides": null
+                }
+            ],
+            "nation": "United States"
+        },
+        {
+            "player": "Caitlin Foord",
+            "number": 9,
+            "positions": [
+                {
+                    "name": "Forward",
+                    "sides": ["Center"]
+                },
+                {
+                    "name": "Midfielder",
+                    "sides": ["Left"]
+                }
+            ],
+            "nation": "Australia"
+        },
+        {
+            "player": "Christine Sinclair",
+            "number": 12,
+            "positions": [
+                {
+                    "name": "Forward",
+                    "sides": ["Center"]
+                },
+                {
+                    "name": "Attacking Midfielder",
+                    "sides": ["Center"]
+                }
+            ],
+            "nation": "Canada"
+        },
+        {
+            "player": "Ifeoma Onumonu",
+            "number": 22,
+            "positions": [
+                {
+                    "name": "Forward",
+                    "sides": null
+                }
+            ],
+            "nation": "United States"
+        },
+        {
+            "player": "Hayley Raso",
+            "number": 21,
+            "positions": [
+                {
+                    "name": "Forward",
+                    "sides": null
+                },
+                {
+                    "name": "Midfielder",
+                    "sides": ["Right"]
+                }
+            ],
+            "nation": "Australia"
+        },
+        {
+            "player": "Mallory Weber",
+            "number": 26,
+            "positions": [
+                {
+                    "name": "Forward",
+                    "sides": null
+                },
+                {
+                    "name": "Midfielder",
+                    "sides": ["Right"]
+                }
+            ],
+            "nation": "United States"
+        },
+        {
+            "player": "Tyler Lussi",
+            "number": 34,
+            "positions": [
+                {
+                    "name": "Forward",
+                    "sides": null
+                }
+            ],
+            "nation": "United States"
+        },
+        {
+            "player": "Midge Purce",
+            "number": 23,
+            "positions": [
+                {
+                    "name": "Forward",
+                    "sides": null
+                },
+                {
+                    "name": "Midfielder",
+                    "sides": ["Right"]
+                }
+            ],
+            "nation": "United States"
+        },
+        {
+            "player": "Ana-Maria Crnogorčević",
+            "number": 7,
+            "positions": [
+                {
+                    "name": "Forward",
+                    "sides": null
+                }
+            ],
+            "nation": "Switzerland"
+        },
+        {
+            "player": "zzzz",
+            "number": 9999,
+            "positions": [
+                {
+                    "name": "zzzz",
+                    "sides": ["zzzz"]
+                }
+            ],
+            "nation": "zzzz"
+        }
+    ]
+}

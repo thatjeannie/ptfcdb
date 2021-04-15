@@ -1,0 +1,31 @@
+{
+  "name": "PTFCDB",
+  "version": "1.0.0",
+  "description": "Portland Thorns Football Club game and player database.",
+  "homepage": "https://ptfcdb.com",
+  "bugs": {
+    "url": "https://github.com/JSDesign/ptfcdb/issues",
+    "email": "jeannie@hey.com"
+  },
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "portland",
+    "portland thorns",
+    "games",
+    "game time",
+    "database",
+    "when the fuck is the next game"
+  ],
+  "author": "Jeannie Stevenson, DFE",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^5.0.0-beta3",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "mongoose": "^5.12.3",
+    "node-sass-middleware": "^0.11.0"
+  }
+}

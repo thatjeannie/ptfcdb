@@ -1,0 +1,50 @@
+
+/* BEGIN CUSTOM VARIABLES */
+// FONTS
+@import url('https://fonts.googleapis.com/css2?family=Lalezar&family=Mulish:wght@400;700&display=swap');
+$font-family-sans-serif: 'Mulish', sans-serif;
+$headings-font-family: 'Lalezar', sans-serif;
+$headings-font-weight: 400;
+
+// COLORS
+$badass:        #bada55;
+$black:         #000;
+$white:         #fff;
+$dopePurple:    #aa00ff;
+$dopePink:      #ff00bb;
+$thornsRed:     #99242c;
+$darkRed:       #841f28;
+
+$custom-theme-colors: (
+    'badass':           $badass,
+    'black':            $black,
+    'white':            $white,
+    'dope-pink':        $dopePink,
+    'dope-purple':      $dopePurple,
+    'thorns-red':       $thornsRed,
+    'dark-red':         $darkRed
+);
+
+
+/* IMPORT JUST VARIABLES, FUNCTIONS, AND MIXINS */
+@import '../node_modules/bootstrap/scss/functions';
+@import '../node_modules/bootstrap/scss/variables';
+@import '../node_modules/bootstrap/scss/mixins';
+
+
+/* MAP MERGING */
+$theme-colors: map-merge($theme-colors, $custom-theme-colors);
+
+
+/* IMPORT THE REST */
+@import '../node_modules/bootstrap/scss/bootstrap';
+
+
+/* BEGIN CUSTOM STYLES */
+main {
+    min-height: calc(100vh - 56px);
+}
+
+.game-card {
+    height: 256px;
+}
