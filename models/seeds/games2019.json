@@ -647,6 +647,595 @@
             "notes": ""
         },
         {
+            "date": "2019-07-20T03:00:00+00:00",
+            "dateLocal": "2019-07-19T20:00:00-07:00",
+            "homeTeam": "Utah Royals FC",
+            "awayTeam": "Portland Thorns FC",
+            "thornsWinLossDraw": "Draw",
+            "finalScore": "2-2",
+            "goals": [
+                {
+                    "team": "Portland Thorns FC",
+                    "player": "Christine Sinclair",
+                    "minute": "9'",
+                    "assistedBy": "",
+                    "pk": false,
+                    "ownGoal": false
+                },
+                {
+                    "team": "Utah Royals FC",
+                    "player": "Christen Press",
+                    "minute": "43'",
+                    "assistedBy": "",
+                    "pk": false,
+                    "ownGoal": false
+                },
+                {
+                    "team": "Portland Thorns FC",
+                    "player": "Becky Sauerbrunn",
+                    "minute": "87'",
+                    "assistedBy": "",
+                    "pk": false,
+                    "ownGoal": true
+                },
+                {
+                    "team": "Utah Royals FC",
+                    "player": "Rachel Corsie",
+                    "minute": "90'",
+                    "assistedBy": "",
+                    "pk": false,
+                    "ownGoal": false
+                }
+            ],
+            "infractions": [
+                {
+                    "team": "Portland Thorns FC",
+                    "player": "Caitlin Foord",
+                    "minute": "83'",
+                    "booked": "Yellow Card"
+                }
+            ],
+            "stadium": "Rio Tinto Stadium",
+            "attendance": 15931,
+            "referee": "",
+            "notes": ""
+        },
+        {
+            "date": "2019-07-25T03:30:00+00:00",
+            "dateLocal": "2019-07-24T20:30:00-07:00",
+            "homeTeam": "Portland Thorns FC",
+            "awayTeam": "Houston Dash",
+            "thornsWinLossDraw": "Win",
+            "finalScore": "5-0",
+            "goals": [
+                {
+                    "team": "Portland Thorns FC",
+                    "player": "Lindsey Horan",
+                    "minute": "7'",
+                    "assistedBy": "",
+                    "pk": false,
+                    "ownGoal": false
+                },
+                {
+                    "team": "Portland Thorns FC",
+                    "player": "Hayley Raso",
+                    "minute": "12'",
+                    "assistedBy": "",
+                    "pk": false,
+                    "ownGoal": false
+                },
+                {
+                    "team": "Portland Thorns FC",
+                    "player": "Christine Sinclair",
+                    "minute": "18'",
+                    "assistedBy": "",
+                    "pk": true,
+                    "ownGoal": false
+                },
+                {
+                    "team": "Portland Thorns FC",
+                    "player": "Hayley Raso",
+                    "minute": "23'",
+                    "assistedBy": "",
+                    "pk": false,
+                    "ownGoal": false
+                },
+                {
+                    "team": "Portland Thorns FC",
+                    "player": "Jane Campbell",
+                    "minute": "71'",
+                    "assistedBy": "",
+                    "pk": false,
+                    "ownGoal": true
+                }
+            ],
+            "infractions": [
+                {
+                    "team": "Houston Dash",
+                    "player": "Allysha Chapman",
+                    "minute": "70'",
+                    "booked": "Yellow Card"
+                }
+            ],
+            "stadium": "Providence Park",
+            "attendance": 22329,
+            "referee": "",
+            "notes": ""
+        },
+        {
+            "date": "2019-08-04T04:00:00+00:00",
+            "dateLocal": "2019-08-03T21:00:00-07:00",
+            "homeTeam": "Portland Thorns FC",
+            "awayTeam": "Sky Blue FC",
+            "thornsWinLossDraw": "Draw",
+            "finalScore": "1-1",
+            "goals": [
+                {
+                    "team": "Portland Thorns FC",
+                    "player": "Christine Sinclair",
+                    "minute": "39'",
+                    "assistedBy": "",
+                    "pk": true,
+                    "ownGoal": false
+                },
+                {
+                    "team": "Sky Blue FC",
+                    "player": "Imani Dorsey",
+                    "minute": "69'",
+                    "assistedBy": "",
+                    "pk": false,
+                    "ownGoal": false
+                }
+            ],
+            "infractions": [
+                {
+                    "team": "Sky Blue FC",
+                    "player": "Amandine Pierre-Louis",
+                    "minute": "73'",
+                    "booked": "Yellow Card"
+                },
+                {
+                    "team": "Sky Blue FC",
+                    "player": "Amandine Pierre-Louis",
+                    "minute": "90+2'",
+                    "booked": "Yellow Card -> Red Card: second booking, sent off"
+                }
+            ],
+            "stadium": "Providence Park",
+            "attendance": 19070,
+            "referee": "",
+            "notes": ""
+        },
+        {
+            "date": "2019-08-08T03:00:00+00:00",
+            "dateLocal": "2019-08-07T20:00:00-07:00",
+            "homeTeam": "Reign FC",
+            "awayTeam": "Portland Thorns FC",
+            "thornsWinLossDraw": "Loss",
+            "finalScore": "1-0",
+            "goals": [
+                {
+                    "team": "Reign FC",
+                    "player": "Rosie White",
+                    "minute": "55'",
+                    "assistedBy": "",
+                    "pk": false,
+                    "ownGoal": false
+                }
+            ],
+            "infractions": [
+                {
+                    "team": "Reign FC",
+                    "player": "Steph Catley",
+                    "minute": "31'",
+                    "booked": "Yellow Card"
+                },
+                {
+                    "team": "Reign FC",
+                    "player": "Jodie Taylor",
+                    "minute": "78'",
+                    "booked": "Yellow Card"
+                }
+            ],
+            "stadium": "Cheney Stadium",
+            "attendance": 5865,
+            "referee": "",
+            "notes": ""
+        },
+        {
+            "date": "2019-08-11T20:00:00+00:00",
+            "dateLocal": "2019-08-11T13:00:00-07:00",
+            "homeTeam": "Portland Thorns FC",
+            "awayTeam": "North Carolina Courage",
+            "thornsWinLossDraw": "Win",
+            "finalScore": "2-1",
+            "goals": [
+                {
+                    "team": "North Carolina Courage",
+                    "player": "Crystal Dunn",
+                    "minute": "4'",
+                    "assistedBy": "",
+                    "pk": false,
+                    "ownGoal": false
+                },
+                {
+                    "team": "Portland Thorns FC",
+                    "player": "Stephanie Labbé",
+                    "minute": "56'",
+                    "assistedBy": "",
+                    "pk": false,
+                    "ownGoal": true
+                },
+                {
+                    "team": "Portland Thorns FC",
+                    "player": "Abby Erceg",
+                    "minute": "82'",
+                    "assistedBy": "",
+                    "pk": false,
+                    "ownGoal": true
+                }
+            ],
+            "infractions": [
+                {
+                    "team": "Portland Thorns FC",
+                    "player": "Caitlin Foord",
+                    "minute": "19'",
+                    "booked": "Yellow Card"
+                }
+            ],
+            "stadium": "Providence Park",
+            "attendance": 25218,
+            "referee": "",
+            "notes": ""
+        },
+        {
+            "date": "2019-08-18T03:30:00+00:00",
+            "dateLocal": "2019-08-17T20:30:00-07:00",
+            "homeTeam": "Portland Thorns FC",
+            "awayTeam": "Washington Spirit",
+            "thornsWinLossDraw": "Win",
+            "finalScore": "3-1",
+            "goals": [
+                {
+                    "team": "Portland Thorns FC",
+                    "player": "Hayley Raso",
+                    "minute": "5'",
+                    "assistedBy": "",
+                    "pk": false,
+                    "ownGoal": false
+                },
+                {
+                    "team": "Portland Thorns FC",
+                    "player": "Emily Sonnett",
+                    "minute": "19'",
+                    "assistedBy": "",
+                    "pk": false,
+                    "ownGoal": false
+                },
+                {
+                    "team": "Portland Thorns FC",
+                    "player": "Christine Sinclair",
+                    "minute": "63'",
+                    "assistedBy": "",
+                    "pk": false,
+                    "ownGoal": false
+                },
+                {
+                    "team": "Washington Spirit",
+                    "player": "Andi Sullivan",
+                    "minute": "68'",
+                    "assistedBy": "",
+                    "pk": false,
+                    "ownGoal": false
+                }
+            ],
+            "infractions": [
+                {
+                    "team": "Washington Spirit",
+                    "player": "Elise Kellond-Knight",
+                    "minute": "58'",
+                    "booked": "Yellow Card"
+                }
+            ],
+            "stadium": "Providence Park",
+            "attendance": 20895,
+            "referee": "",
+            "notes": ""
+        },
+        {
+            "date": "2019-08-25T20:00:00+00:00",
+            "dateLocal": "2019-08-25T13:00:00-07:00",
+            "homeTeam": "Portland Thorns FC",
+            "awayTeam": "Chicago Red Stars",
+            "thornsWinLossDraw": "Win",
+            "finalScore": "3-0",
+            "goals": [
+                {
+                    "team": "Portland Thorns FC",
+                    "player": "Christine Sinclair",
+                    "minute": "12'",
+                    "assistedBy": "",
+                    "pk": false,
+                    "ownGoal": false
+                },
+                {
+                    "team": "Portland Thorns FC",
+                    "player": "Midge Purce",
+                    "minute": "24'",
+                    "assistedBy": "",
+                    "pk": false,
+                    "ownGoal": false
+                },
+                {
+                    "team": "Portland Thorns FC",
+                    "player": "Midge Purce",
+                    "minute": "56'",
+                    "assistedBy": "",
+                    "pk": false,
+                    "ownGoal": false
+                }
+            ],
+            "infractions": [
+                {
+                    "team": "Chicago Red Stars",
+                    "player": "Nikki Stanton",
+                    "minute": "63'",
+                    "booked": "Yellow Card"
+                },
+                {
+                    "team": "Portland Thorns FC",
+                    "player": "Tobin Heath",
+                    "minute": "zzzz'",
+                    "booked": "Yellow Card"
+                },
+                {
+                    "team": "Chicago Red Stars",
+                    "player": "Yūki Nagasato",
+                    "minute": "84'",
+                    "booked": "Yellow Card"
+                }
+            ],
+            "stadium": "Providence Park",
+            "attendance": 17542,
+            "referee": "",
+            "notes": ""
+        },
+        {
+            "date": "2019-09-07T02:30:00+00:00",
+            "dateLocal": "2019-09-06T19:30:00-07:00",
+            "homeTeam": "Utah Royals FC",
+            "awayTeam": "Portland Thorns FC",
+            "thornsWinLossDraw": "Loss",
+            "finalScore": "1-0",
+            "goals": [
+                {
+                    "team": "Utah Royals FC",
+                    "player": "Becky Sauerbrunn",
+                    "minute": "36'",
+                    "assistedBy": "",
+                    "pk": false,
+                    "ownGoal": false
+                }
+            ],
+            "infractions": [
+                {
+                    "team": "Portland Thorns FC",
+                    "player": "Emily Sonnett",
+                    "minute": "61'",
+                    "booked": "Yellow Card"
+                },
+                {
+                    "team": "Utah Royals FC",
+                    "player": "Rachel Corsie",
+                    "minute": "65'",
+                    "booked": "Yellow Card"
+                },
+                {
+                    "team": "Portland Thorns FC",
+                    "player": "Emily Sonnett",
+                    "minute": "77'",
+                    "booked": "Yellow Card -> Red Card: second booking, sent off"
+                },
+                {
+                    "team": "Utah Royals FC",
+                    "player": "Amy Rodriguez",
+                    "minute": "78'",
+                    "booked": "Yellow Card"
+                },
+                {
+                    "team": "Portland Thorns FC",
+                    "player": "Lindsey Horan",
+                    "minute": "80'",
+                    "booked": "Yellow Card"
+                }
+            ],
+            "stadium": "Rio Tinto Stadium",
+            "attendance": 10897,
+            "referee": "",
+            "notes": ""
+        },
+        {
+            "date": "2019-09-12T03:30:00+00:00",
+            "dateLocal": "2019-09-11T20:30:00-07:00",
+            "homeTeam": "Portland Thorns FC",
+            "awayTeam": "North Carolina Courage",
+            "thornsWinLossDraw": "Loss",
+            "finalScore": "0-6",
+            "goals": [
+                {
+                    "team": "North Carolina Courage",
+                    "player": "Debinha",
+                    "minute": "15'",
+                    "assistedBy": "zzzz",
+                    "pk": false,
+                    "ownGoal": false
+                },
+                {
+                    "team": "North Carolina Courage",
+                    "player": "Lynn Williams",
+                    "minute": "21'",
+                    "assistedBy": "",
+                    "pk": false,
+                    "ownGoal": false
+                },
+                {
+                    "team": "North Carolina Courage",
+                    "player": "Lynn Williams",
+                    "minute": "24'",
+                    "assistedBy": "",
+                    "pk": false,
+                    "ownGoal": false
+                },
+                {
+                    "team": "North Carolina Courage",
+                    "player": "Crystal Dunn",
+                    "minute": "61'",
+                    "assistedBy": "",
+                    "pk": false,
+                    "ownGoal": false
+                },
+                {
+                    "team": "North Carolina Courage",
+                    "player": "Lynn Williams",
+                    "minute": "68'",
+                    "assistedBy": "",
+                    "pk": false,
+                    "ownGoal": false
+                },
+                {
+                    "team": "North Carolina Courage",
+                    "player": "Kristen Hamilton",
+                    "minute": "89'",
+                    "assistedBy": "",
+                    "pk": false,
+                    "ownGoal": false
+                }
+            ],
+            "infractions": [
+                {
+                    "team": "Portland Thorns FC",
+                    "player": "Meghan Klingenberg",
+                    "minute": "57'",
+                    "booked": "Yellow Card"
+                },
+                {
+                    "team": "Portland Thorns FC",
+                    "player": "Lindsey Horan",
+                    "minute": "58'",
+                    "booked": "Yellow Card"
+                },
+                {
+                    "team": "North Carolina Courage",
+                    "player": "Jaelene Hinkle",
+                    "minute": "69'",
+                    "booked": "Yellow Card"
+                }
+            ],
+            "stadium": "Providence Park",
+            "attendance": 17517,
+            "referee": "",
+            "notes": ""
+        },
+        {
+            "date": "2019-09-22T03:30:00+00:00",
+            "dateLocal": "2019-09-21T20:30:00-07:00",
+            "homeTeam": "Portland Thorns FC",
+            "awayTeam": "Houston Dash",
+            "thornsWinLossDraw": "Win",
+            "finalScore": "1-0",
+            "goals": [
+                {
+                    "team": "Portland Thorns FC",
+                    "player": "Tobin Heath",
+                    "minute": "48'",
+                    "assistedBy": "",
+                    "pk": false,
+                    "ownGoal": false
+                }
+            ],
+            "infractions": null,
+            "stadium": "Providence Park",
+            "attendance": 21022,
+            "referee": "",
+            "notes": ""
+        },
+        {
+            "date": "2019-09-29T21:00:00+00:00",
+            "dateLocal": "2019-09-29T14:00:00-07:00",
+            "homeTeam": "Reign FC",
+            "awayTeam": "Portland Thorns FC",
+            "thornsWinLossDraw": "Loss",
+            "finalScore": "2-0",
+            "goals": [
+                {
+                    "team": "Reign FC",
+                    "player": "Jodie Taylor",
+                    "minute": "27'",
+                    "assistedBy": "",
+                    "pk": false,
+                    "ownGoal": false
+                },
+                {
+                    "team": "Reign FC",
+                    "player": "Bethany Balcer",
+                    "minute": "81'",
+                    "assistedBy": "",
+                    "pk": false,
+                    "ownGoal": false
+                }
+            ],
+            "infractions": [
+                {
+                    "team": "Portland Thorns FC",
+                    "player": "Caitlin Foord",
+                    "minute": "34'",
+                    "booked": "Yellow Card"
+                },
+                {
+                    "team": "Reign FC",
+                    "player": "Theresa Nielsen",
+                    "minute": "36'",
+                    "booked": "Yellow Card"
+                },
+                {
+                    "team": "Reign FC",
+                    "player": "Beverly Yanez",
+                    "minute": "51'",
+                    "booked": "Yellow Card"
+                },
+                {
+                    "team": "Portland Thorns FC",
+                    "player": "Dagný Brynjarsdóttir",
+                    "minute": "57'",
+                    "booked": "Yellow Card"
+                },
+                {
+                    "team": "Portland Thorns FC",
+                    "player": "Emily Sonnett",
+                    "minute": "89'",
+                    "booked": "Yellow Card"
+                }
+            ],
+            "stadium": "Cheney Stadium",
+            "attendance": 7370,
+            "referee": "",
+            "notes": ""
+        },
+        {
+            "date": "2019-10-13T03:30:00+00:00",
+            "dateLocal": "2019-10-12T20:30:00-07:00",
+            "homeTeam": "Portland Thorns FC",
+            "awayTeam": "Washington Spirit",
+            "thornsWinLossDraw": "Draw",
+            "finalScore": "0-0",
+            "goals": null,
+            "infractions": null,
+            "stadium": "Providence Park",
+            "attendance": 24521,
+            "referee": "",
+            "notes": ""
+        },
+        {
             "date": "1974-06-16T09:38:00+00:00",
             "dateLocal": "1974-06-16T02:38:00-07:00",
             "homeTeam": "zzzz",
@@ -759,34 +1348,34 @@
 
     "2019-post": [
         {
-            "date": "1974-06-16T09:38:00+00:00",
-            "dateLocal": "1974-06-16T02:38:00-07:00",
-            "homeTeam": "zzzz",
-            "awayTeam": "zzzz",
-            "thornsWinLossDraw": "Win",
-            "finalScore": "zzzz",
+            "date": "2019-10-20T20:30:00+00:00",
+            "dateLocal": "2019-10-20T13:30:00-07:00",
+            "homeTeam": "Chicago Red Stars",
+            "awayTeam": "Portland Thorns FC",
+            "thornsWinLossDraw": "Loss",
+            "finalScore": "1-0",
             "goals": [
                 {
-                    "team": "zzzz",
-                    "player": "zzzz",
-                    "minute": "zzzz'",
-                    "assistedBy": "zzzz",
+                    "team": "Chicago Red Stars",
+                    "player": "Sam Kerr",
+                    "minute": "8'",
+                    "assistedBy": "",
                     "pk": false,
                     "ownGoal": false
                 }
             ],
             "infractions": [
                 {
-                    "team": "zzzz",
-                    "player": "zzzz",
-                    "minute": "zzzz'",
+                    "team": "Portland Thorns FC",
+                    "player": "Elizabeth Ball",
+                    "minute": "45+1'",
                     "booked": "Yellow Card"
                 }
             ],
-            "stadium": "zzzz",
-            "attendance": 1234,
-            "referee": "zzzz",
-            "notes": "zzzz"
+            "stadium": "SeatGeek Stadium",
+            "attendance": 9218,
+            "referee": "",
+            "notes": ""
         }
     ]
 }
