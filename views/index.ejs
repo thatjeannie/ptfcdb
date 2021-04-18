@@ -5,11 +5,22 @@
 
 <%- include('./partials/nav.ejs') %>
 
-<main class="container-xxl py-4 py-xl-5 mt-5">
-    <section class="text-center pb-5">
-        <h1 class="display-1">Next Game</h1>
-        <p class="lead text-muted mb-0">Sub-Heading</p>
-        <p class="text-muted">Small Text</p>
+<main class="container-xxl pt-4 pt-md-5">
+    <section class="text-center">
+        <h1 class="display-1 mb-4 mb-lg-5">Next Thorns Game</h1>
+        <div class="row justify-content-center text-center">
+            <div class="col-auto">
+                <div class="card shadow mb-4 mb-lg-5">
+                    <div class="card-body px-5">
+                        <h2 class="text-thorns-red">
+                            <span class="d-block display-1"><%= gameDateDay %></span>
+                            <span class="d-block display-12"><%= gameDateMonth %> <%= game.date.getDate() %><%= gameDateOrdinal %></span>
+                            <span class="d-block display-14"><%= gameTime %></span>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 </main>
 

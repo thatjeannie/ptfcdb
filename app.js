@@ -1,25 +1,25 @@
 const express = require('express');
 const path = require('path');
-const mongoose = require('mongoose');
 const sassMiddleware = require('node-sass-middleware');
-
-// const conn = require('./models/games2018');
-const PreseasonGame = require('./models/preseasonGame');
-const PostseasonGame = require('./models/postseasonGame');
+const mongoose = require('mongoose');
 
 const dateFormatters = require('./utils/dates');
-
-// const gameSchema = require('./schemas/game');
+const dbRoot = require('./connections/dbRoot');
 
 const model2018Games = require('./connections/games2018');
 const model2018Preseason = require('./connections/preseason2018');
 const model2018Postseason = require('./connections/postseason2018');
-
 const model2019Games = require('./connections/games2019');
+const model2019Preseason = require('./connections/preseason2019');
+const model2019Postseason = require('./connections/postseason2019');
+const model2020Games = require('./connections/games2020');
+const model2021Preseason = require('./connections/preseason2021');
+
 
 
 // THE APP
 const app = express();
+
 
 
 // MIDDLEWARES
@@ -43,75 +43,68 @@ app.use(sassMiddleware({
 // Set port
 const PORT = process.env.PORT || 3000
 
+// Set Current Season DB URI and connect to it
+const dbURICurrentSeason = `${dbRoot}/games-2021?retryWrites=true&w=majority`;
+const connCurrentSeason = mongoose.createConnection(dbURICurrentSeason, { useNewUrlParser: true, useUnifiedTopology: true });
+
 // Set Public directory
 app.use(express.static('public'));
 
-
-// DB CONNECTION
-
-// Connect to MongoDB first and start the server after that
-// 2018 Games DB
-// const dbURI = 'mongodb+srv://ptfcdb_1:juN1perfA1ry@rctid.dwjjb.mongodb.net/games-2018?retryWrites=true&w=majority';
-// 2019 Games DB
-// const dbURI = 'mongodb+srv://ptfcdb_1:juN1perfA1ry@rctid.dwjjb.mongodb.net/games-2019?retryWrites=true&w=majority';
-// mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
-//     .then((result) => {
-//         app.listen(PORT, () => { console.log(`Server started on port ${PORT}`); });
-//         console.log('Connected to Database');
-//     })
-//     .catch((error) => { console.log(`Error connecting to Database: ${error.msg}`)});
-
-
-
-
-
-// const conn1 = mongoose.createConnection('mongodb+srv://ptfcdb_1:juN1perfA1ry@rctid.dwjjb.mongodb.net/games-2018?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true });
-// const conn2 = mongoose.createConnection('mongodb+srv://ptfcdb_1:juN1perfA1ry@rctid.dwjjb.mongodb.net/games-2019?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true });
-// const SuperSchema = mongoose.Schema({});
-// const superModel1 = conn1.model('Games', gameSchema);
-// const superModel2 = conn2.model('Games', gameSchema);
-model2018Games.find({})
-    .then((games) => {
-        console.log(games[0].date);
-    })
-    .catch((error) =>  {
-        console.log(error);
-});
-model2018Preseason.find({})
-    .then((games) => {
-        console.log(games[0].date);
-    })
-    .catch((error) =>  {
-        console.log(error);
-});
-model2019Games.find({})
-    .then((games) => {
-        console.log(games[0].date);
-    })
-    .catch((error) =>  {
-        console.log(error);
-});
-
-
-
-
-
+// Start the app
 app.listen(PORT, () => { console.log(`Server started on port ${PORT}`); });
+
+// Set Current Season Game Schema and Model
+const currentSeasonGameSchema = require('./schemas/preseasonGame');
+const CurrentSeasonGame = connCurrentSeason.model('PreseasonGames', currentSeasonGameSchema);
+
 
 
 // ROUTING
-
 // Home
 app.get('/', (req, res) => {
-    res.render('index', { title: 'Home' });
+    CurrentSeasonGame.findOne().where('date').gte(dateFormatters.theNow)
+        .then((result) => {
+            const substr = `$1`;
+            res.render('index', {
+                game: result,
+                title: 'PTFCDB - Next Thorns Game',
+                seasonMeta: 'Regular Season',
+                gameDateDay: dateFormatters.weekdayNames[result.date.getDay()],
+                gameDateMonth: dateFormatters.monthNames[result.date.getMonth()],
+                gameDateOrdinal: dateFormatters.ordinalOf(result.date.getDate()),
+                gameTime: result.date.toLocaleTimeString().replace(/:00.*?(:00)/gm, substr)
+            });
+        })
+        .catch((error) =>  {
+            console.log(error);
+        });
 });
 
-// 2018
 // Regular Season
 app.get('/games/2018/regularseason', (req, res) => {
     model2018Games.find().sort({ date: 1 })
         .then((result) => {
-            res.render('games-2018', { games: result, title: 'All 2018 Games', seasonMeta: 'Regular Season' });
+            res.render('games-2018', { games: result, title: 'PTFCDB - All 2018 Games', seasonMeta: 'Regular Season' });
+        })
+        .catch((error) =>  {
+            console.log(error);
+        });
+});
+
+app.get('/games/2019/regularseason', (req, res) => {
+    model2019Games.find().sort({ date: 1 })
+        .then((result) => {
+            res.render('games-2019', { games: result, title: 'PTFCDB - All 2019 Games', seasonMeta: 'Regular Season' });
+        })
+        .catch((error) =>  {
+            console.log(error);
+        });
+});
+
+app.get('/games/2020/regularseason', (req, res) => {
+    model2020Games.find().sort({ date: 1 })
+        .then((result) => {
+            res.render('games-2020', { games: result, title: 'PTFCDB - All 2020 Games', seasonMeta: 'Regular Season' });
         })
         .catch((error) =>  {
             console.log(error);
@@ -125,7 +118,39 @@ app.get('/games/2018/regularseason/:id', (req, res) => {
         .then((result) => {
             res.render('game-details', {
                 game: result,
-                title: 'Game Details',
+                title: 'PTFCDB - Game Details',
+                gameDateMonth: dateFormatters.monthNames[result.date.getMonth()],
+                gameDateOrdinal: dateFormatters.ordinalOf(result.date.getDate())
+            });
+        })
+        .catch((error) =>  {
+            console.log(error);
+        });
+});
+
+app.get('/games/2019/regularseason/:id', (req, res) => {
+    const id = req.params.id;
+    model2019Games.findById(id)
+        .then((result) => {
+            res.render('game-details', {
+                game: result,
+                title: 'PTFCDB - Game Details',
+                gameDateMonth: dateFormatters.monthNames[result.date.getMonth()],
+                gameDateOrdinal: dateFormatters.ordinalOf(result.date.getDate())
+            });
+        })
+        .catch((error) =>  {
+            console.log(error);
+        });
+});
+
+app.get('/games/2020/regularseason/:id', (req, res) => {
+    const id = req.params.id;
+    model2020Games.findById(id)
+        .then((result) => {
+            res.render('game-details', {
+                game: result,
+                title: 'PTFCDB - Game Details',
                 gameDateMonth: dateFormatters.monthNames[result.date.getMonth()],
                 gameDateOrdinal: dateFormatters.ordinalOf(result.date.getDate())
             });
@@ -139,7 +164,27 @@ app.get('/games/2018/regularseason/:id', (req, res) => {
 app.get('/games/2018/preseason', (req, res) => {
     model2018Preseason.find().sort({ date: 1 })
         .then((result) => {
-            res.render('games-2018', { games: result, title: '2018 Preseason Games', seasonMeta: 'Preseason' });
+            res.render('games-2018', { games: result, title: 'PTFCDB - 2018 Preseason Games', seasonMeta: 'Preseason' });
+        })
+        .catch((error) =>  {
+            console.log(error);
+        });
+});
+
+app.get('/games/2019/preseason', (req, res) => {
+    model2019Preseason.find().sort({ date: 1 })
+        .then((result) => {
+            res.render('games-2019', { games: result, title: 'PTFCDB - 2019 Preseason Games', seasonMeta: 'Preseason' });
+        })
+        .catch((error) =>  {
+            console.log(error);
+        });
+});
+
+app.get('/games/2021/preseason', (req, res) => {
+    model2021Preseason.find().sort({ date: 1 })
+        .then((result) => {
+            res.render('games-2021', { games: result, title: 'PTFCDB - 2021 Preseason Games', seasonMeta: 'Preseason' });
         })
         .catch((error) =>  {
             console.log(error);
@@ -153,7 +198,39 @@ app.get('/games/2018/preseason/:id', (req, res) => {
         .then((result) => {
             res.render('game-details', {
                 game: result,
-                title: 'Game Details',
+                title: 'PTFCDB - Game Details',
+                gameDateMonth: dateFormatters.monthNames[result.date.getMonth()],
+                gameDateOrdinal: dateFormatters.ordinalOf(result.date.getDate())
+            });
+        })
+        .catch((error) =>  {
+            console.log(error);
+        });
+});
+
+app.get('/games/2019/preseason/:id', (req, res) => {
+    const id = req.params.id;
+    model2019Preseason.findById(id)
+        .then((result) => {
+            res.render('game-details', {
+                game: result,
+                title: 'PTFCDB - Game Details',
+                gameDateMonth: dateFormatters.monthNames[result.date.getMonth()],
+                gameDateOrdinal: dateFormatters.ordinalOf(result.date.getDate())
+            });
+        })
+        .catch((error) =>  {
+            console.log(error);
+        });
+});
+
+app.get('/games/2021/preseason/:id', (req, res) => {
+    const id = req.params.id;
+    model2021Preseason.findById(id)
+        .then((result) => {
+            res.render('game-details', {
+                game: result,
+                title: 'PTFCDB - Game Details',
                 gameDateMonth: dateFormatters.monthNames[result.date.getMonth()],
                 gameDateOrdinal: dateFormatters.ordinalOf(result.date.getDate())
             });
@@ -167,7 +244,17 @@ app.get('/games/2018/preseason/:id', (req, res) => {
 app.get('/games/2018/postseason', (req, res) => {
     model2018Postseason.find().sort({ date: 1 })
         .then((result) => {
-            res.render('games-2018', { games: result, title: '2018 Postseason Games', seasonMeta: 'Postseason' });
+            res.render('games-2018', { games: result, title: 'PTFCDB - 2018 Postseason Games', seasonMeta: 'Postseason' });
+        })
+        .catch((error) =>  {
+            console.log(error);
+        });
+});
+
+app.get('/games/2019/postseason', (req, res) => {
+    model2019Postseason.find().sort({ date: 1 })
+        .then((result) => {
+            res.render('games-2019', { games: result, title: 'PTFCDB - 2019 Postseason Games', seasonMeta: 'Postseason' });
         })
         .catch((error) =>  {
             console.log(error);
@@ -181,7 +268,23 @@ app.get('/games/2018/postseason/:id', (req, res) => {
         .then((result) => {
             res.render('game-details', {
                 game: result,
-                title: 'Game Details',
+                title: 'PTFCDB - Game Details',
+                gameDateMonth: dateFormatters.monthNames[result.date.getMonth()],
+                gameDateOrdinal: dateFormatters.ordinalOf(result.date.getDate())
+            });
+        })
+        .catch((error) =>  {
+            console.log(error);
+        });
+});
+
+app.get('/games/2019/postseason/:id', (req, res) => {
+    const id = req.params.id;
+    model2019Postseason.findById(id)
+        .then((result) => {
+            res.render('game-details', {
+                game: result,
+                title: 'PTFCDB - Game Details',
                 gameDateMonth: dateFormatters.monthNames[result.date.getMonth()],
                 gameDateOrdinal: dateFormatters.ordinalOf(result.date.getDate())
             });
@@ -194,90 +297,55 @@ app.get('/games/2018/postseason/:id', (req, res) => {
 
 
 // DB SEEDING
-// Route to add Preseason Games
-// app.get('/games/add-preseason-game', (req, res) => {
-//     const preseasonGame = new PreseasonGame({
-//         "date": "2019-03-31T03:30:00+00:00",
-//         "dateLocal": "2019-03-30T20:30:00-07:00",
-//         "homeTeam": "Portland Thorns FC",
-//         "awayTeam": "Reign FC",
-//         "thornsWinLossDraw": "Draw",
-//         "finalScore": "0-0",
-//         "goals": null,
-//         "infractions": null,
-//         "stadium": "Merlo Field",
-//         "attendance": 4100,
-//         "referee": "",
-//         "notes": ""
-//     });
+// Each game type uses the same route and some constants, so uncomment/use only one at a time
 
-//     preseasonGame.save()
-//     .then((result) => {
-//         res.send(result);
-//     })
-//     .catch((error) => {
-//         console.log(error);
-//     });
-// });
+// Add Preseason Games
+// Uncomment connection details and route, adjust the year as needed
+// const gameSchema = require('./schemas/preseasonGame');
+// const dbURI2021 = `${dbRoot}/games-2021?retryWrites=true&w=majority`;
+// const conn2021PreseasonGames = mongoose.createConnection(dbURI2021, { useNewUrlParser: true, useUnifiedTopology: true });
+// const PreseasonGame = conn2021PreseasonGames.model('PreseasonGames', gameSchema);
 
-// Route to add Postseason Games
-// app.get('/games/add-postseason-game', (req, res) => {
-//     const postseasonGame = new PostseasonGame({
-//         "date": "2019-10-20T20:30:00+00:00",
-//         "dateLocal": "2019-10-20T13:30:00-07:00",
-//         "homeTeam": "Chicago Red Stars",
-//         "awayTeam": "Portland Thorns FC",
-//         "thornsWinLossDraw": "Loss",
-//         "finalScore": "1-0",
-//         "goals": [
-//             {
-//                 "team": "Chicago Red Stars",
-//                 "player": "Sam Kerr",
-//                 "minute": "8'",
-//                 "assistedBy": "",
-//                 "pk": false,
-//                 "ownGoal": false
-//             }
-//         ],
-//         "infractions": [
-//             {
-//                 "team": "Portland Thorns FC",
-//                 "player": "Elizabeth Ball",
-//                 "minute": "45+1'",
-//                 "booked": "Yellow Card"
-//             }
-//         ],
-//         "stadium": "SeatGeek Stadium",
-//         "attendance": 9218,
-//         "referee": "",
-//         "notes": ""
-//     });
-
-//     postseasonGame.save()
-//     .then((result) => {
-//         res.send(result);
-//     })
-//     .catch((error) => {
-//         console.log(error);
-//     });
-// });
-
-// Route to add Regular Season Games
 // app.get('/games/add-game', (req, res) => {
-//     const game = new Game({
-//         "date": "2019-10-13T03:30:00+00:00",
-//         "dateLocal": "2019-10-12T20:30:00-07:00",
-//         "homeTeam": "Portland Thorns FC",
-//         "awayTeam": "Washington Spirit",
-//         "thornsWinLossDraw": "Draw",
-//         "finalScore": "0-0",
-//         "goals": null,
-//         "infractions": null,
-//         "stadium": "Providence Park",
-//         "attendance": 24521,
-//         "referee": "",
-//         "notes": ""
-//     });
+//     const game = new PreseasonGame({ /* insert game object here */ });
+
+//     game.save()
+//         .then((result) => {
+//             res.send(result);
+//         })
+//         .catch((error) => {
+//             console.log(error);
+//         });
+// });
+
+// Add Postseason Games
+// Uncomment connection details and route and some constants, adjust the year as needed
+// const gameSchema = require('./schemas/postseasonGame');
+// const dbURI2020 = `${dbRoot}/games-2020?retryWrites=true&w=majority`;
+// const conn2020PostseasonGames = mongoose.createConnection(dbURI2020, { useNewUrlParser: true, useUnifiedTopology: true });
+// const PostseasonGame = conn2020PostseasonGames.model('PostseasonGames', gameSchema);
+
+// app.get('/games/add-game', (req, res) => {
+//     const game = new PostseasonGame({ /* insert game object here */ });
+
+//     game.save()
+//         .then((result) => {
+//             res.send(result);
+//         })
+//         .catch((error) => {
+//             console.log(error);
+//         });
+// });
+
+// Add Regular Season Games
+// Uncomment connection details and route and some constants, adjust the year as needed
+// const gameSchema = require('./schemas/game');
+// const dbURI2020 = `${dbRoot}/games-2020?retryWrites=true&w=majority`;
+// const conn2020Games = mongoose.createConnection(dbURI2020, { useNewUrlParser: true, useUnifiedTopology: true });
+// const Game = conn2020Games.model('Games', gameSchema);
+
+// app.get('/games/add-game', (req, res) => {
+//     const game = new Game({ /* insert game object here */ });
 
 //     game.save()
 //         .then((result) => {
@@ -292,5 +360,5 @@ app.get('/games/2018/postseason/:id', (req, res) => {
 
 // Handle 404s
 app.use((req, res) => {
-    res.status(404).render('ohnooo', { title: 'Oh nooo!' });
+    res.status(404).render('ohnooo', { title: 'PTFCDB - 404' });
 });

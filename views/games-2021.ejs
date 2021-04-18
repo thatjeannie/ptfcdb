@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head.ejs') %>
+<body>
+<% let now = new Date() %>
+
+<%- include('./partials/nav.ejs') %>
+
+<main class="container-xxl py-4 py-xl-5 mt-5">
+    <section class="text-center">
+        <h1 class="display-1 mb-0">2021 Games</h1>
+        <ul class="nav justify-content-center mb-5">
+            <li class="nav-item">
+                <% if (seasonMeta === 'Preseason') { %>
+                <a class="nav-link active" aria-current="page" href="/games/2021/preseason">Preseason</a>
+                <% } else { %>
+                <a class="nav-link" href="/games/2021/preseason">Preseason</a>
+                <% } %>
+            </li>
+            <li class="nav-item">
+                <span class="nav-link">Regular Season (TBA)</span>
+                <% /* %>
+                <!-- <% if (seasonMeta === 'Regular Season') { %>
+                <a class="nav-link active" aria-current="page" href="/games/2021/regularseason">Regular Season</a>
+                <% } else { %>
+                <a class="nav-link" href="/games/2021/regularseason">Regular Season</a>
+                <% } %> -->
+                <% */ %>
+            </li>
+            <li class="nav-item">
+                <span class="nav-link">Postseason (TBA)</span>
+                <% /* %>
+                <!-- <% if (seasonMeta === 'Postseason') { %>
+                <a class="nav-link active" aria-current="page" href="/games/2021/postseason">Postseason</a>
+                <% } else { %>
+                <a class="nav-link" href="/games/2021/postseason">Postseason</a>
+                <% } %> -->
+                <% */ %>
+            </li>
+        </ul>
+        <div class="row g-3">
+            <% if (games.length > 0) { %>
+                <% games.forEach(game => { %>
+                    <div class="col-lg-6 col-xl-4">
+                        <div class="card game-card shadow">
+                            <div class="card-body d-flex flex-column justify-content-between">
+                                <div class="row justify-content-between align-items-center g-2 mb-2">
+                                    <div class="col-sm-4"><p class="lead mb-0"><%= game.homeTeam %></p></div>
+                                    <div class="col-sm-4"><p class="h1 mx-4 mb-0">VS</p></div>
+                                    <div class="col-sm-4"><p class="lead mb-0"><%= game.awayTeam %></p></div>
+                                </div>
+                                <div class="text-center">
+                                    <% if (game.date > now) { %>
+                                        <p class="h4 mb-0">This is a Future Game</p>
+                                    <% } else { %>
+                                        <% if (game.thornsWinLossDraw !== "unknown" && game.finalScore !== "unknown") { %>
+                                            <p class="h4"><%= game.thornsWinLossDraw %></p>
+                                            <p class="lead"><%= game.finalScore %></p>
+                                        <% } else { %>
+                                            <p class="h6 mb-0">Game is in progress.</p>
+                                        <% } %>
+                                    <% } %>
+                                </div>
+                                <% if (seasonMeta === 'Regular Season') { %>
+                                    <p class="text-center mb-0"><a href="/games/2021/regularseason/<%= game._id %>">View Details</a></p>
+                                <% } else if (seasonMeta === 'Preseason') { %>
+                                    <p class="text-center mb-0"><a href="/games/2021/preseason/<%= game._id %>">View Details</a></p>
+                                <% } else if (seasonMeta === 'Postseason') { %>
+                                    <p class=text-center "mb-0"><a href="/games/2021/postseason/<%= game._id %>">View Details</a></p>
+                                <% } %>
+                            </div>
+                        </div>
+                    </div>
+                <% }); %>
+            <% } else { %>
+                <div class="col-md-4">
+                    <p>No games to display. For some reason.</p>
+                </div>
+            <% } %>
+        </div>
+    </section>
+</main>
+
+<%- include('./partials/footer.ejs') %>
+
+</body>
+</html>

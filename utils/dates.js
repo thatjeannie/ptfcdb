@@ -1,6 +1,8 @@
 
 // Just some helpful date formatting
 
+const theNow = new Date();
+
 const monthNames = [ 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December' ];
 const monthNamesAbbr = [ 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec' ];
 
@@ -22,4 +24,4 @@ function ordinalOf(date) {
     return suffix;
 }
 
-module.exports = { monthNames, monthNamesAbbr, weekdayNames, weekdayNamesAbbr, ordinalOf };
+module.exports = { theNow, monthNames, monthNamesAbbr, weekdayNames, weekdayNamesAbbr, ordinalOf };

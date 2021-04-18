@@ -1,0 +1,461 @@
+{
+    "2020-regular": [
+        {
+            "date": "2020-06-27T20:00:00+00:00",
+            "dateLocal": "2020-06-27T13:00:00-07:00",
+            "homeTeam": "North Carolina Courage",
+            "awayTeam": "Portland Thorns FC",
+            "thornsWinLossDraw": "Loss",
+            "finalScore": "2-1",
+            "goals": [
+                {
+                    "team": "North Carolina Courage",
+                    "player": "Debinha",
+                    "minute": "75'",
+                    "assistedBy": "",
+                    "pk": false,
+                    "ownGoal": false
+                },
+                {
+                    "team": "Portland Thorns FC",
+                    "player": "Simone Charley",
+                    "minute": "80'",
+                    "assistedBy": "",
+                    "pk": false,
+                    "ownGoal": false
+                },
+                {
+                    "team": "North Carolina Courage",
+                    "player": "Lynn Williams",
+                    "minute": "90+4'",
+                    "assistedBy": "",
+                    "pk": false,
+                    "ownGoal": false
+                }
+            ],
+            "infractions": null,
+            "stadium": "Zions Bank Stadium",
+            "attendance": 0,
+            "referee": "Lukasz Szpala",
+            "notes": "2020 Challenge Cup. Pandemic year. Attendance closed."
+        },
+        {
+            "date": "2020-07-01T20:00:00+00:00",
+            "dateLocal": "2020-07-01T13:00:00-07:00",
+            "homeTeam": "Portland Thorns FC",
+            "awayTeam": "Chicago Red Stars",
+            "thornsWinLossDraw": "Draw",
+            "finalScore": "0-0",
+            "goals": null,
+            "infractions": [
+                {
+                    "team": "Chicago Red Stars",
+                    "player": "Makenzy Doniak",
+                    "minute": "49'",
+                    "booked": "Yellow Card"
+                },
+                {
+                    "team": "Portland Thorns FC",
+                    "player": "Tyler Lussi",
+                    "minute": "80'",
+                    "booked": "Yellow Card"
+                }
+            ],
+            "stadium": "Zions Bank Stadium",
+            "attendance": 0,
+            "referee": "Danielle Chesky",
+            "notes": "2020 Challenge Cup. Pandemic year. Attendance closed."
+        },
+        {
+            "date": "2020-07-05T20:00:00+00:00",
+            "dateLocal": "2020-07-05T13:00:00-07:00",
+            "homeTeam": "Portland Thorns FC",
+            "awayTeam": "Washington Spirit",
+            "thornsWinLossDraw": "Draw",
+            "finalScore": "1-1",
+            "goals": [
+                {
+                    "team": "Portland Thorns FC",
+                    "player": "Lindsey Horan",
+                    "minute": "69'",
+                    "assistedBy": "",
+                    "pk": false,
+                    "ownGoal": false
+                },
+                {
+                    "team": "Washington Spirit",
+                    "player": "Sam Staab",
+                    "minute": "77'",
+                    "assistedBy": "",
+                    "pk": false,
+                    "ownGoal": false
+                }
+            ],
+            "infractions": null,
+            "stadium": "Zions Bank Stadium",
+            "attendance": 0,
+            "referee": "Karen Abt",
+            "notes": "2020 Challenge Cup. Pandemic year. Attendance closed."
+        },
+        {
+            "date": "2020-07-13T20:00:00+00:00",
+            "dateLocal": "2020-07-13T13:00:00-07:00",
+            "homeTeam": "OL Reign",
+            "awayTeam": "Portland Thorns FC",
+            "thornsWinLossDraw": "Draw",
+            "finalScore": "0-0",
+            "goals": null,
+            "infractions": null,
+            "stadium": "Zions Bank Stadium",
+            "attendance": 0,
+            "referee": "Tori Penso",
+            "notes": "2020 Challenge Cup. Pandemic year. Attendance closed."
+        },
+        {
+            "date": "2020-07-17T20:00:00+00:00",
+            "dateLocal": "2020-07-17T13:00:00-07:00",
+            "homeTeam": "North Carolina Courage",
+            "awayTeam": "Portland Thorns FC",
+            "thornsWinLossDraw": "Win",
+            "finalScore": "0-1",
+            "goals": [
+                {
+                    "team": "Portland Thorns FC",
+                    "player": "Morgan Weaver",
+                    "minute": "68'",
+                    "assistedBy": "",
+                    "pk": false,
+                    "ownGoal": false
+                }
+            ],
+            "infractions": [
+                {
+                    "team": "North Carolina Courage",
+                    "player": "Debinha",
+                    "minute": "52'",
+                    "booked": "Yellow Card"
+                },
+                {
+                    "team": "North Carolina Courage",
+                    "player": "Denise O'Sullivan",
+                    "minute": "90+4'",
+                    "booked": "Yellow Card"
+                }
+            ],
+            "stadium": "Zions Bank Stadium",
+            "attendance": 0,
+            "referee": "Lukasz Szpala",
+            "notes": "2020 Challenge Cup Quarterfinals (knockout round). Pandemic year. Attendance closed."
+        },
+        {
+            "date": "2020-07-22T20:00:00+00:00",
+            "dateLocal": "2020-07-22T13:00:00-07:00",
+            "homeTeam": "Houston Dash",
+            "awayTeam": "Portland Thorns FC",
+            "thornsWinLossDraw": "Loss",
+            "finalScore": "0-1",
+            "goals": [
+                {
+                    "team": "Houston Dash",
+                    "player": "Rachel Daly",
+                    "minute": "69'",
+                    "assistedBy": "zzzz",
+                    "pk": false,
+                    "ownGoal": false
+                }
+            ],
+            "infractions": [
+                {
+                    "team": "Houston Dash",
+                    "player": "Rachel Daly",
+                    "minute": "90'",
+                    "booked": "Yellow Card"
+                }
+            ],
+            "stadium": " Rio Tinto Stadium",
+            "attendance": 0,
+            "referee": "Tori Penso",
+            "notes": "2020 Challenge Cup Semifinals (knockout round). Pandemic year. Attendance closed."
+        },
+        {
+            "date": "2020-09-30T20:00:00+00:00",
+            "dateLocal": "2020-09-30T13:00:00-07:00",
+            "homeTeam": "Portland Thorns FC",
+            "awayTeam": "Utah Royals FC",
+            "thornsWinLossDraw": "Win",
+            "finalScore": "3-0",
+            "goals": [
+                {
+                    "team": "Portland Thorns FC",
+                    "player": "Simone Charley",
+                    "minute": "35'",
+                    "assistedBy": "",
+                    "pk": false,
+                    "ownGoal": false
+                },
+                {
+                    "team": "Portland Thorns FC",
+                    "player": "Sophia Smith",
+                    "minute": "72'",
+                    "assistedBy": "",
+                    "pk": false,
+                    "ownGoal": false
+                },
+                {
+                    "team": "Portland Thorns FC",
+                    "player": "Lindsey Horan",
+                    "minute": "81'",
+                    "assistedBy": "",
+                    "pk": false,
+                    "ownGoal": false
+                }
+            ],
+            "infractions": [
+                {
+                    "team": "Portland Thorns FC",
+                    "player": "Madison Pogarch",
+                    "minute": "88'",
+                    "booked": "Yellow Card"
+                },
+                {
+                    "team": "Portland Thorns FC",
+                    "player": "Meghan Klingenberg",
+                    "minute": "90+5'",
+                    "booked": "Yellow Card"
+                }
+            ],
+            "stadium": "Providence Park",
+            "attendance": 0,
+            "referee": "Adorae Monroy",
+            "notes": "2020 Fall Series. Pandemic year. Attendance closed."
+        },
+        {
+            "date": "2020-10-01T02:00:00+00:00",
+            "dateLocal": "2020-09-30T19:00:00-07:00",
+            "homeTeam": "Portland Thorns FC",
+            "awayTeam": "OL Reign",
+            "thornsWinLossDraw": "Win",
+            "finalScore": "4-1",
+            "goals": [
+                {
+                    "team": "Portland Thorns FC",
+                    "player": "Christine Sinclair",
+                    "minute": "40'",
+                    "assistedBy": "",
+                    "pk": false,
+                    "ownGoal": false
+                },
+                {
+                    "team": "Portland Thorns FC",
+                    "player": "Christine Sinclair",
+                    "minute": "45+5'",
+                    "assistedBy": "",
+                    "pk": true,
+                    "ownGoal": false
+                },
+                {
+                    "team": "Portland Thorns FC",
+                    "player": "Raquel Rodríguez",
+                    "minute": "57'",
+                    "assistedBy": "",
+                    "pk": false,
+                    "ownGoal": false
+                },
+                {
+                    "team": "OL Reign",
+                    "player": "Bethany Balcer",
+                    "minute": "70'",
+                    "assistedBy": "",
+                    "pk": false,
+                    "ownGoal": false
+                },
+                {
+                    "team": "Portland Thorns FC",
+                    "player": "Christine Sinclair",
+                    "minute": "74'",
+                    "assistedBy": "",
+                    "pk": false,
+                    "ownGoal": false
+                }
+            ],
+            "infractions": [
+                {
+                    "team": "Portland Thorns FC",
+                    "player": "Meghan Klingenberg",
+                    "minute": "35'",
+                    "booked": "Yellow Card"
+                }
+            ],
+            "stadium": "Providence Park",
+            "attendance": 0,
+            "referee": "Farhad Dadkho",
+            "notes": "2020 Fall Series. Pandemic year. Attendance closed."
+        },
+        {
+            "date": "2020-10-03T20:00:00+00:00",
+            "dateLocal": "2020-10-03T13:00:00-07:00",
+            "homeTeam": "Utah Royals FC",
+            "awayTeam": "Portland Thorns FC",
+            "thornsWinLossDraw": "Draw",
+            "finalScore": "1-1",
+            "goals": [
+                {
+                    "team": "Utah Royals FC",
+                    "player": "Amy Rodriguez",
+                    "minute": "9'",
+                    "assistedBy": "",
+                    "pk": false,
+                    "ownGoal": false
+                },
+                {
+                    "team": "Portland Thorns FC",
+                    "player": "Christine Sinclair",
+                    "minute": "59'",
+                    "assistedBy": "",
+                    "pk": false,
+                    "ownGoal": false
+                }
+            ],
+            "infractions": null,
+            "stadium": "Rio Tinto Stadium",
+            "attendance": 0,
+            "referee": "Karen Abt",
+            "notes": "2020 Fall Series. Pandemic year. Attendance closed."
+        },
+        {
+            "date": "2020-10-11T01:00:00+00:00",
+            "dateLocal": "2020-10-10T18:00:00-07:00",
+            "homeTeam": "OL Reign",
+            "awayTeam": "Portland Thorns FC",
+            "thornsWinLossDraw": "Win",
+            "finalScore": "1-2",
+            "goals": [
+                {
+                    "team": "Portland Thorns FC",
+                    "player": "Christine Sinclair",
+                    "minute": "43'",
+                    "assistedBy": "",
+                    "pk": true,
+                    "ownGoal": false
+                },
+                {
+                    "team": "OL Reign",
+                    "player": "Amber Brooks",
+                    "minute": "46'",
+                    "assistedBy": "",
+                    "pk": false,
+                    "ownGoal": false
+                },
+                {
+                    "team": "Portland Thorns FC",
+                    "player": "Christine Sinclair",
+                    "minute": "73'",
+                    "assistedBy": "",
+                    "pk": true,
+                    "ownGoal": false
+                }
+            ],
+            "infractions": null,
+            "stadium": "Cheney Stadium",
+            "attendance": 0,
+            "referee": "",
+            "notes": "2020 Fall Series. Pandemic year. Attendance closed."
+        },
+        {
+            "date": "1974-06-16T09:38:00+00:00",
+            "dateLocal": "1974-06-16T02:38:00-07:00",
+            "homeTeam": "zzzz",
+            "awayTeam": "zzzz",
+            "thornsWinLossDraw": "Win",
+            "finalScore": "zzzz",
+            "goals": [
+                {
+                    "team": "zzzz",
+                    "player": "zzzz",
+                    "minute": "zzzz'",
+                    "assistedBy": "zzzz",
+                    "pk": false,
+                    "ownGoal": false
+                }
+            ],
+            "infractions": [
+                {
+                    "team": "zzzz",
+                    "player": "zzzz",
+                    "minute": "zzzz'",
+                    "booked": "Yellow Card"
+                }
+            ],
+            "stadium": "zzzz",
+            "attendance": 0,
+            "referee": "zzzz",
+            "notes": "zzzz. Pandemic year. Attendance closed."
+        }
+    ],
+
+    "2020-pre": [
+        {
+            "date": "1974-06-16T09:38:00+00:00",
+            "dateLocal": "1974-06-16T02:38:00-07:00",
+            "homeTeam": "zzzz",
+            "awayTeam": "zzzz",
+            "thornsWinLossDraw": "Win",
+            "finalScore": "zzzz",
+            "goals": [
+                {
+                    "team": "zzzz",
+                    "player": "zzzz",
+                    "minute": "zzzz'",
+                    "assistedBy": "zzzz",
+                    "pk": false,
+                    "ownGoal": false
+                }
+            ],
+            "infractions": [
+                {
+                    "team": "zzzz",
+                    "player": "zzzz",
+                    "minute": "zzzz'",
+                    "booked": "Yellow Card"
+                }
+            ],
+            "stadium": "zzzz",
+            "attendance": "Closed",
+            "referee": "zzzz",
+            "notes": "zzzz. Pandemic year."
+        }
+    ],
+
+    "2020-post": [
+        {
+            "date": "1974-06-16T09:38:00+00:00",
+            "dateLocal": "1974-06-16T02:38:00-07:00",
+            "homeTeam": "zzzz",
+            "awayTeam": "zzzz",
+            "thornsWinLossDraw": "Win",
+            "finalScore": "zzzz",
+            "goals": [
+                {
+                    "team": "zzzz",
+                    "player": "zzzz",
+                    "minute": "zzzz'",
+                    "assistedBy": "zzzz",
+                    "pk": false,
+                    "ownGoal": false
+                }
+            ],
+            "infractions": [
+                {
+                    "team": "zzzz",
+                    "player": "zzzz",
+                    "minute": "zzzz'",
+                    "booked": "Yellow Card"
+                }
+            ],
+            "stadium": "zzzz",
+            "attendance": "Closed",
+            "referee": "zzzz",
+            "notes": "zzzz. Pandemic year."
+        }
+    ]
+}

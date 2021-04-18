@@ -6,6 +6,15 @@ $font-family-sans-serif: 'Mulish', sans-serif;
 $headings-font-family: 'Lalezar', sans-serif;
 $headings-font-weight: 400;
 
+// TYPOGRAPHY
+$custom-display-font-sizes: (
+  11: 10rem,
+  12: 9rem,
+  13: 8rem,
+  14: 7rem,
+  15: 6rem
+);
+
 // COLORS
 $badass:        #bada55;
 $black:         #000;
@@ -33,6 +42,7 @@ $custom-theme-colors: (
 
 
 /* MAP MERGING */
+$display-font-sizes: map-merge($display-font-sizes, $custom-display-font-sizes);
 $theme-colors: map-merge($theme-colors, $custom-theme-colors);
 
 
@@ -41,8 +51,15 @@ $theme-colors: map-merge($theme-colors, $custom-theme-colors);
 
 
 /* BEGIN CUSTOM STYLES */
+.nav-link {
+    &.active {
+        color: $thornsRed;
+    }
+}
+
 main {
-    min-height: calc(100vh - 56px);
+    min-height: calc(100vh - (56px + 146px));
+    margin-top: 56px;
 }
 
 .game-card {

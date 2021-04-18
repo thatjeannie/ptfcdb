@@ -1,0 +1,246 @@
+{
+    "2021-regular": [
+        {
+            "date": "1974-06-16T09:38:00+00:00",
+            "dateLocal": "1974-06-16T02:38:00-07:00",
+            "homeTeam": "zzzz",
+            "awayTeam": "zzzz",
+            "thornsWinLossDraw": "Win",
+            "finalScore": "zzzz",
+            "goals": [
+                {
+                    "team": "zzzz",
+                    "player": "zzzz",
+                    "minute": "zzzz'",
+                    "assistedBy": "zzzz",
+                    "pk": false,
+                    "ownGoal": false
+                }
+            ],
+            "infractions": [
+                {
+                    "team": "zzzz",
+                    "player": "zzzz",
+                    "minute": "zzzz'",
+                    "booked": "Yellow Card"
+                }
+            ],
+            "stadium": "zzzz",
+            "attendance": "Closed",
+            "referee": "zzzz",
+            "notes": "zzzz. Pandemic year."
+        }
+    ],
+
+    "2021-pre": [
+        {
+            "date": "2021-04-10T03:30:00+00:00",
+            "dateLocal": "2021-04-09T20:30:00-08:00",
+            "homeTeam": "Portland Thorns FC",
+            "awayTeam": "Kansas City",
+            "thornsWinLossDraw": "Win",
+            "finalScore": "2-1",
+            "goals": [
+                {
+                    "team": "Portland Thorns FC",
+                    "player": "Rocky Rodriguez",
+                    "minute": "8'",
+                    "assistedBy": "Meghan Klingenberg",
+                    "pk": false,
+                    "ownGoal": false
+                },
+                {
+                    "team": "Portland Thorns FC",
+                    "player": "Tyler Lussi",
+                    "minute": "58'",
+                    "assistedBy": "Christen Westphal",
+                    "pk": false,
+                    "ownGoal": false
+                },
+                {
+                    "team": "Kansas City",
+                    "player": "Amy Shilling",
+                    "minute": "60'",
+                    "assistedBy": "Victoria Pickett",
+                    "pk": false,
+                    "ownGoal": false
+                }
+            ],
+            "infractions": [
+                {
+                    "team": "Kansas City",
+                    "player": "Victoria Pickett",
+                    "minute": "48'",
+                    "booked": "Yellow Card"
+                },
+                {
+                    "team": "Portland Thorns FC",
+                    "player": "Simone Charley",
+                    "minute": "49'",
+                    "booked": "Yellow Card"
+                },
+                {
+                    "team": "Kansas City",
+                    "player": "Amy Shilling",
+                    "minute": "70'",
+                    "booked": "Yellow Card"
+                },
+                {
+                    "team": "Portland Thorns FC",
+                    "player": "Simone Charley",
+                    "minute": "90'",
+                    "booked": "Yellow Card -> Red Card: second booking, sent off"
+                },
+                {
+                    "team": "Kansas City",
+                    "player": "Kate Del Fava",
+                    "minute": "90+1'",
+                    "booked": "Yellow Card"
+                },
+                {
+                    "team": "Portland Thorns FC",
+                    "player": "Morgan Weaver",
+                    "minute": "90+4'",
+                    "booked": "Red Card"
+                },
+                {
+                    "team": "Kansas City",
+                    "player": "Kristen Edmonds",
+                    "minute": "90+4'",
+                    "booked": "Red Card"
+                }
+            ],
+            "stadium": "Providence Park",
+            "attendance": 0,
+            "referee": "",
+            "notes": "2021 Challenge Cup. Pandemic year. Attendance unknown."
+        },
+        {
+            "date": "2021-04-16T00:30:00+00:00",
+            "dateLocal": "2021-04-15T17:30:00-08:00",
+            "homeTeam": "Chicago Red Stars",
+            "awayTeam": "Portland Thorns FC",
+            "thornsWinLossDraw": "Win",
+            "finalScore": "0-1",
+            "goals": [
+                {
+                    "team": "Portland Thorns FC",
+                    "player": "Morgan Weaver",
+                    "minute": "66'",
+                    "assistedBy": "Celeste Boureille",
+                    "pk": false,
+                    "ownGoal": false
+                }
+            ],
+            "infractions": [
+                {
+                    "team": "Portland Thorns FC",
+                    "player": "Christen Westphal",
+                    "minute": "45'",
+                    "booked": "Yellow Card"
+                },
+                {
+                    "team": "Chicago Red Stars",
+                    "player": "Ella Stevens",
+                    "minute": "85'",
+                    "booked": "Yellow Card"
+                }
+            ],
+            "stadium": "SeatGeek Stadium",
+            "attendance": 0,
+            "referee": "",
+            "notes": "2021 Challenge Cup. Pandemic year. Attendance unknown."
+        },
+        {
+            "date": "2021-04-22T03:00:00+00:00",
+            "dateLocal": "2021-04-21T20:00:00-08:00",
+            "homeTeam": "Portland Thorns FC",
+            "awayTeam": "OL Reign",
+            "thornsWinLossDraw": "unknown",
+            "finalScore": "unknown",
+            "goals": null,
+            "infractions": null,
+            "stadium": "Providence Park",
+            "attendance": 0,
+            "referee": "",
+            "notes": "2021 Challenge Cup. Pandemic year. Broadcast: CBS Sports Network."
+        },
+        {
+            "date": "2021-05-03T00:30:00+00:00",
+            "dateLocal": "2021-05-02T17:30:00-08:00",
+            "homeTeam": "Houston Dash",
+            "awayTeam": "Portland Thorns FC",
+            "thornsWinLossDraw": "unknown",
+            "finalScore": "unknown",
+            "goals": null,
+            "infractions": null,
+            "stadium": "BBVA Stadium",
+            "attendance": 0,
+            "referee": "",
+            "notes": "2021 Challenge Cup. Pandemic year."
+        },
+        {
+            "date": "1974-06-16T09:38:00+00:00",
+            "dateLocal": "1974-06-16T02:38:00-08:00",
+            "homeTeam": "zzzz",
+            "awayTeam": "zzzz",
+            "thornsWinLossDraw": "Win",
+            "finalScore": "zzzz",
+            "goals": [
+                {
+                    "team": "zzzz",
+                    "player": "zzzz",
+                    "minute": "zzzz'",
+                    "assistedBy": "zzzz",
+                    "pk": false,
+                    "ownGoal": false
+                }
+            ],
+            "infractions": [
+                {
+                    "team": "zzzz",
+                    "player": "zzzz",
+                    "minute": "zzzz'",
+                    "booked": "Yellow Card"
+                }
+            ],
+            "stadium": "zzzz",
+            "attendance": "Closed",
+            "referee": "zzzz",
+            "notes": "zzzz. Pandemic year."
+        }
+    ],
+
+    "2021-post": [
+        {
+            "date": "1974-06-16T09:38:00+00:00",
+            "dateLocal": "1974-06-16T02:38:00-07:00",
+            "homeTeam": "zzzz",
+            "awayTeam": "zzzz",
+            "thornsWinLossDraw": "Win",
+            "finalScore": "zzzz",
+            "goals": [
+                {
+                    "team": "zzzz",
+                    "player": "zzzz",
+                    "minute": "zzzz'",
+                    "assistedBy": "zzzz",
+                    "pk": false,
+                    "ownGoal": false
+                }
+            ],
+            "infractions": [
+                {
+                    "team": "zzzz",
+                    "player": "zzzz",
+                    "minute": "zzzz'",
+                    "booked": "Yellow Card"
+                }
+            ],
+            "stadium": "zzzz",
+            "attendance": "Closed",
+            "referee": "zzzz",
+            "notes": "zzzz. Pandemic year."
+        }
+    ]
+}

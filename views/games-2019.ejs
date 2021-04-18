@@ -7,27 +7,27 @@
 
 <main class="container-xxl py-4 py-xl-5 mt-5">
     <section class="text-center">
-        <h1 class="display-1 mb-0">2018 Games</h1>
+        <h1 class="display-1 mb-0">2019 Games</h1>
         <ul class="nav justify-content-center mb-5">
             <li class="nav-item">
                 <% if (seasonMeta === 'Preseason') { %>
-                <a class="nav-link active" aria-current="page" href="/games/2018/preseason">Preseason</a>
+                <a class="nav-link active" aria-current="page" href="/games/2019/preseason">Preseason</a>
                 <% } else { %>
-                <a class="nav-link" href="/games/2018/preseason">Preseason</a>
+                <a class="nav-link" href="/games/2019/preseason">Preseason</a>
                 <% } %>
             </li>
             <li class="nav-item">
                 <% if (seasonMeta === 'Regular Season') { %>
-                <a class="nav-link active" aria-current="page" href="/games/2018/regularseason">Regular Season</a>
+                <a class="nav-link active" aria-current="page" href="/games/2019/regularseason">Regular Season</a>
                 <% } else { %>
-                <a class="nav-link" href="/games/2018/regularseason">Regular Season</a>
+                <a class="nav-link" href="/games/2019/regularseason">Regular Season</a>
                 <% } %>
             </li>
             <li class="nav-item">
                 <% if (seasonMeta === 'Postseason') { %>
-                <a class="nav-link active" aria-current="page" href="/games/2018/postseason">Postseason</a>
+                <a class="nav-link active" aria-current="page" href="/games/2019/postseason">Postseason</a>
                 <% } else { %>
-                <a class="nav-link" href="/games/2018/postseason">Postseason</a>
+                <a class="nav-link" href="/games/2019/postseason">Postseason</a>
                 <% } %>
             </li>
         </ul>
@@ -47,11 +47,11 @@
                                     <p class="lead"><%= game.finalScore %></p>
                                 </div>
                                 <% if (seasonMeta === 'Regular Season') { %>
-                                    <p class="text-center mb-0"><a href="/games/2018/regularseason/<%= game._id %>">View Details</a></p>
+                                    <p class="text-center mb-0"><a href="/games/2019/regularseason/<%= game._id %>">View Details</a></p>
                                 <% } else if (seasonMeta === 'Preseason') { %>
-                                    <p class="text-center mb-0"><a href="/games/2018/preseason/<%= game._id %>">View Details</a></p>
+                                    <p class="text-center mb-0"><a href="/games/2019/preseason/<%= game._id %>">View Details</a></p>
                                 <% } else if (seasonMeta === 'Postseason') { %>
-                                    <p class=text-center "mb-0"><a href="/games/2018/postseason/<%= game._id %>">View Details</a></p>
+                                    <p class=text-center "mb-0"><a href="/games/2019/postseason/<%= game._id %>">View Details</a></p>
                                 <% } %>
                             </div>
                         </div>
