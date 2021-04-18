@@ -6,7 +6,9 @@ prettyTime = function(date) {
     const regex = /:00.*?(:00)/gm;
     const substr = `$1`;
 
-    let prettierTime = date.toLocaleTimeString().replace(regex, substr);
+    const options = { timeZone: 'America/Los_Angeles', timeZoneName: 'short' }
+
+    let prettierTime = date.toLocaleTimeString('en-US', options).replace(regex, substr);
 
     return prettierTime;
 }
