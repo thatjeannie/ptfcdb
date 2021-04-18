@@ -4,7 +4,6 @@ const sassMiddleware = require('node-sass-middleware');
 const mongoose = require('mongoose');
 
 const dateFormatters = require('./utils/dates');
-const dbRoot = require('./connections/dbRoot');
 
 const model2018Games = require('./connections/games2018');
 const model2018Preseason = require('./connections/preseason2018');
@@ -14,6 +13,11 @@ const model2019Preseason = require('./connections/preseason2019');
 const model2019Postseason = require('./connections/postseason2019');
 const model2020Games = require('./connections/games2020');
 const model2021Preseason = require('./connections/preseason2021');
+
+
+
+// LOAD ENV VARIABLES
+if (process.env.NODE_ENV !== 'production') { require('dotenv').config(); }
 
 
 
@@ -44,7 +48,7 @@ app.use(sassMiddleware({
 const PORT = process.env.PORT || 3000
 
 // Set Current Season DB URI and connect to it
-const dbURICurrentSeason = `${dbRoot}/games-2021?retryWrites=true&w=majority`;
+const dbURICurrentSeason = `${process.env.DATABASE_URL}/games-2021?retryWrites=true&w=majority`;
 const connCurrentSeason = mongoose.createConnection(dbURICurrentSeason, { useNewUrlParser: true, useUnifiedTopology: true });
 
 // Set Public directory
@@ -302,7 +306,7 @@ app.get('/games/2019/postseason/:id', (req, res) => {
 // Add Preseason Games
 // Uncomment connection details and route, adjust the year as needed
 // const gameSchema = require('./schemas/preseasonGame');
-// const dbURI2021 = `${dbRoot}/games-2021?retryWrites=true&w=majority`;
+// const dbURI2021 = `${process.env.DATABASE_URL}/games-2021?retryWrites=true&w=majority`;
 // const conn2021PreseasonGames = mongoose.createConnection(dbURI2021, { useNewUrlParser: true, useUnifiedTopology: true });
 // const PreseasonGame = conn2021PreseasonGames.model('PreseasonGames', gameSchema);
 
@@ -321,7 +325,7 @@ app.get('/games/2019/postseason/:id', (req, res) => {
 // Add Postseason Games
 // Uncomment connection details and route and some constants, adjust the year as needed
 // const gameSchema = require('./schemas/postseasonGame');
-// const dbURI2020 = `${dbRoot}/games-2020?retryWrites=true&w=majority`;
+// const dbURI2020 = `${dprocess.env.DATABASE_URLbRoot}/games-2020?retryWrites=true&w=majority`;
 // const conn2020PostseasonGames = mongoose.createConnection(dbURI2020, { useNewUrlParser: true, useUnifiedTopology: true });
 // const PostseasonGame = conn2020PostseasonGames.model('PostseasonGames', gameSchema);
 
@@ -340,7 +344,7 @@ app.get('/games/2019/postseason/:id', (req, res) => {
 // Add Regular Season Games
 // Uncomment connection details and route and some constants, adjust the year as needed
 // const gameSchema = require('./schemas/game');
-// const dbURI2020 = `${dbRoot}/games-2020?retryWrites=true&w=majority`;
+// const dbURI2020 = `${process.env.DATABASE_URL}/games-2020?retryWrites=true&w=majority`;
 // const conn2020Games = mongoose.createConnection(dbURI2020, { useNewUrlParser: true, useUnifiedTopology: true });
 // const Game = conn2020Games.model('Games', gameSchema);
 
