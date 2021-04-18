@@ -76,7 +76,7 @@ app.get('/', (req, res) => {
                 gameDateDay: dateFormatters.weekdayNames[result.date.getDay()],
                 gameDateMonth: dateFormatters.monthNames[result.date.getMonth()],
                 gameDateOrdinal: dateFormatters.ordinalOf(result.date.getDate()),
-                gameTime: result.date.toLocaleTimeString().replace(/:00.*?(:00)/gm, substr)
+                gameTime: result.date
             });
         })
         .catch((error) =>  {
@@ -123,6 +123,7 @@ app.get('/games/2018/regularseason/:id', (req, res) => {
             res.render('game-details', {
                 game: result,
                 title: 'PTFCDB - Game Details',
+                gameDateDay: dateFormatters.weekdayNames[result.date.getDay()],
                 gameDateMonth: dateFormatters.monthNames[result.date.getMonth()],
                 gameDateOrdinal: dateFormatters.ordinalOf(result.date.getDate())
             });
@@ -139,6 +140,7 @@ app.get('/games/2019/regularseason/:id', (req, res) => {
             res.render('game-details', {
                 game: result,
                 title: 'PTFCDB - Game Details',
+                gameDateDay: dateFormatters.weekdayNames[result.date.getDay()],
                 gameDateMonth: dateFormatters.monthNames[result.date.getMonth()],
                 gameDateOrdinal: dateFormatters.ordinalOf(result.date.getDate())
             });
@@ -155,6 +157,7 @@ app.get('/games/2020/regularseason/:id', (req, res) => {
             res.render('game-details', {
                 game: result,
                 title: 'PTFCDB - Game Details',
+                gameDateDay: dateFormatters.weekdayNames[result.date.getDay()],
                 gameDateMonth: dateFormatters.monthNames[result.date.getMonth()],
                 gameDateOrdinal: dateFormatters.ordinalOf(result.date.getDate())
             });
@@ -203,6 +206,7 @@ app.get('/games/2018/preseason/:id', (req, res) => {
             res.render('game-details', {
                 game: result,
                 title: 'PTFCDB - Game Details',
+                gameDateDay: dateFormatters.weekdayNames[result.date.getDay()],
                 gameDateMonth: dateFormatters.monthNames[result.date.getMonth()],
                 gameDateOrdinal: dateFormatters.ordinalOf(result.date.getDate())
             });
@@ -219,6 +223,7 @@ app.get('/games/2019/preseason/:id', (req, res) => {
             res.render('game-details', {
                 game: result,
                 title: 'PTFCDB - Game Details',
+                gameDateDay: dateFormatters.weekdayNames[result.date.getDay()],
                 gameDateMonth: dateFormatters.monthNames[result.date.getMonth()],
                 gameDateOrdinal: dateFormatters.ordinalOf(result.date.getDate())
             });
@@ -235,6 +240,7 @@ app.get('/games/2021/preseason/:id', (req, res) => {
             res.render('game-details', {
                 game: result,
                 title: 'PTFCDB - Game Details',
+                gameDateDay: dateFormatters.weekdayNames[result.date.getDay()],
                 gameDateMonth: dateFormatters.monthNames[result.date.getMonth()],
                 gameDateOrdinal: dateFormatters.ordinalOf(result.date.getDate())
             });
@@ -273,6 +279,7 @@ app.get('/games/2018/postseason/:id', (req, res) => {
             res.render('game-details', {
                 game: result,
                 title: 'PTFCDB - Game Details',
+                gameDateDay: dateFormatters.weekdayNames[result.date.getDay()],
                 gameDateMonth: dateFormatters.monthNames[result.date.getMonth()],
                 gameDateOrdinal: dateFormatters.ordinalOf(result.date.getDate())
             });
@@ -289,6 +296,7 @@ app.get('/games/2019/postseason/:id', (req, res) => {
             res.render('game-details', {
                 game: result,
                 title: 'PTFCDB - Game Details',
+                gameDateDay: dateFormatters.weekdayNames[result.date.getDay()],
                 gameDateMonth: dateFormatters.monthNames[result.date.getMonth()],
                 gameDateOrdinal: dateFormatters.ordinalOf(result.date.getDate())
             });

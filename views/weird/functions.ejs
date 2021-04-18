@@ -1,0 +1,13 @@
+
+<!-- Just some helpful functions -->
+
+<%
+prettyTime = function(date) {
+    const regex = /:00.*?(:00)/gm;
+    const substr = `$1`;
+
+    let prettierTime = date.toLocaleTimeString().replace(regex, substr);
+
+    return prettierTime;
+}
+%>
