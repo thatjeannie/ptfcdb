@@ -44,4 +44,14 @@
 
         return prettierDate;
     }
+
+    prettyDay = function(date) {
+        const options = { timeZone: 'America/Los_Angeles', timeZoneName: 'short' }
+
+        let forcedPDT = date.toLocaleString('en-US', options);
+        let dateIfiedPDT = new Date(forcedPDT);
+        let something = weekdayNames[dateIfiedPDT.getDay()]
+
+        return something;
+    }
 %>
