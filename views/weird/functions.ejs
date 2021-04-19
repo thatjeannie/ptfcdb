@@ -35,4 +35,13 @@
 
         return prettierTime;
     }
+
+    <!-- Game Date -->
+    prettyDate = function(date) {
+        const options = { timeZone: 'America/Los_Angeles', timeZoneName: 'short' }
+
+        let prettierDate = date.toLocaleString('en-US', options);
+
+        return prettierDate;
+    }
 %>

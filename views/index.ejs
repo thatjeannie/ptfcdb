@@ -32,6 +32,14 @@
                         <h2 class="text-thorns-red mb-0">
                             <%= gameDate.getTimezoneOffset() %>
                         </h2>
+                        <p class="mb-0">.toUTCString()</p>
+                        <h2 class="text-thorns-red mb-0">
+                            <%= gameDate.toUTCString() %>
+                        </h2>
+                        <p class="mb-0">Function to set local time zone</p>
+                        <h2 class="text-thorns-red mb-0">
+                            <%= prettyDate(gameDate) %>
+                        </h2>
                     </div>
                 </div>
             </div>
