@@ -20,11 +20,17 @@
                             <span class="d-block display-14"><%= prettyTime(gameTime) %></span>
                         </h2> -->
                         <% */ %>
-                        <h2 class="text-thorns-red mb-0">
+                        <p class="mb-0">Game Date</p>
+                        <h2 class="text-thorns-red">
                             <%= gameDate %>
                         </h2>
+                        <p class="mb-0">.toLocaleString()</p>
                         <h2 class="text-thorns-red mb-0">
                             <%= gameDate.toLocaleString() %>
+                        </h2>
+                        <p class="mb-0">.getTimezoneOffset()</p>
+                        <h2 class="text-thorns-red mb-0">
+                            <%= gameDate.getTimezoneOffset() %>
                         </h2>
                     </div>
                 </div>
