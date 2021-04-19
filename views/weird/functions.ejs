@@ -38,10 +38,39 @@
 
     <!-- Game Date -->
     prettyDate = function(date) {
-        const options = { timeZone: 'America/Los_Angeles', timeZoneName: 'short', dateStyle: 'full', timeStyle: 'short' }
-
-        let prettierDate = date.toLocaleString('en-US', options);
+        const dateStringOptions = { timeZone: 'America/Los_Angeles', timeZoneName: 'short', dateStyle: 'full', timeStyle: 'short' }
+        let prettierDate = date.toLocaleString('en-US', dateStringOptions);
 
         return prettierDate;
+    }
+
+    localDate = function(date) {
+        const dateStringOptions = { timeZone: 'America/Los_Angeles', timeZoneName: 'short', dateStyle: 'full', timeStyle: 'short' }
+        const localDate = date.toLocaleString('en-US', dateStringOptions);
+
+        return localDate;
+    }
+
+    justDay = function(date) {
+        const newLocalDate = localDate(date);
+        const datePieces = newLocalDate.split(', ');
+        const gameDay = datePieces[0];
+
+        return gameDay;
+    }
+    justMonthDate = function(date) {
+        const newLocalDate = localDate(date);
+        const datePieces = newLocalDate.split(', ');
+        const gameMonthDate = datePieces[1];
+
+        return gameMonthDate;
+    }
+    justYear = function(date) {
+        const newLocalDate = localDate(date);
+        const datePieces = newLocalDate.split(', ');
+        let gameYear = datePieces[2];
+        gameYear = gameYear.replace("2021 ", "");
+
+        return gameYear;
     }
 %>

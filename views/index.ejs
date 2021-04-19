@@ -20,25 +20,10 @@
                             <span class="d-block display-14"><%= prettyTime(gameTime) %></span>
                         </h2> -->
                         <% */ %>
-                        <p class="mb-0">Game Date</p>
-                        <h2 class="text-thorns-red">
-                            <%= gameDate %>
-                        </h2>
-                        <p class="mb-0">.toLocaleString()</p>
                         <h2 class="text-thorns-red mb-0">
-                            <%= gameDate.toLocaleString() %>
-                        </h2>
-                        <p class="mb-0">.getTimezoneOffset()</p>
-                        <h2 class="text-thorns-red mb-0">
-                            <%= gameDate.getTimezoneOffset() %>
-                        </h2>
-                        <p class="mb-0">.toUTCString()</p>
-                        <h2 class="text-thorns-red mb-0">
-                            <%= gameDate.toUTCString() %>
-                        </h2>
-                        <p class="mb-0">Function to set to PDT time zone</p>
-                        <h2 class="text-thorns-red mb-0">
-                            <%= prettyDate(gameDate) %>
+                            <span class="d-block display-1"><%= justDay(gameDate) %></span>
+                            <span class="d-block display-12"><%= justMonthDate(gameDate) %></span>
+                            <span class="d-block display-14"><%= justYear(gameDate) %></span>
                         </h2>
                     </div>
                 </div>
