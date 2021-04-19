@@ -73,9 +73,6 @@ app.get('/', (req, res) => {
                 game: result,
                 title: 'PTFCDB - Next Thorns Game',
                 seasonMeta: 'Regular Season',
-                // gameDateDay: dateFormatters.weekdayNames[result.date.getDay()],
-                // gameDateMonth: dateFormatters.monthNames[result.date.getMonth()],
-                // gameDateOrdinal: dateFormatters.ordinalOf(result.date.getDate()),
                 gameDate: result.date
             });
         })

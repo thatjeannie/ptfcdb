@@ -2,48 +2,7 @@
 <!-- Just some helpful functions -->
 
 <%
-    <!-- Game Day -->
-    const weekdayNames = [ 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday' ];
-
-    <!-- Game Month -->
-    const monthNames = [ 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December' ];
-
-    <!-- Game Date -->
-    function ordinalOf(date) {
-        let suffix = '';
-        if (date === 1 || date === 21 || date === 31) {
-            suffix = 'st';
-        } else if (date === 2 || date === 22) {
-            suffix = 'nd'
-        } else if (date === 3 || date === 23) {
-            suffix = 'rd'
-        } else {
-            suffix = 'th'
-        }
-
-        return suffix;
-    }
-
-    <!-- Game Time -->
-    prettyTime = function(date) {
-        const regex = /:00.*?(:00)/gm;
-        const substr = `$1`;
-
-        const options = { timeZone: 'America/Los_Angeles', timeZoneName: 'short', weekday: 'long' }
-
-        let prettierTime = date.toLocaleTimeString('en-US', options).replace(regex, substr);
-
-        return prettierTime;
-    }
-
-    <!-- Game Date -->
-    prettyDate = function(date) {
-        const dateStringOptions = { timeZone: 'America/Los_Angeles', timeZoneName: 'short', dateStyle: 'full', timeStyle: 'short' }
-        let prettierDate = date.toLocaleString('en-US', dateStringOptions);
-
-        return prettierDate;
-    }
-
+    <!-- Fix the GD Game Date -->
     localDate = function(date) {
         const dateStringOptions = { timeZone: 'America/Los_Angeles', timeZoneName: 'short', dateStyle: 'full', timeStyle: 'short' }
         const localDate = date.toLocaleString('en-US', dateStringOptions);
