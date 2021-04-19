@@ -29,7 +29,7 @@
         const regex = /:00.*?(:00)/gm;
         const substr = `$1`;
 
-        const options = { timeZone: 'America/Los_Angeles', timeZoneName: 'short' }
+        const options = { timeZone: 'America/Los_Angeles', timeZoneName: 'short', weekday: 'long' }
 
         let prettierTime = date.toLocaleTimeString('en-US', options).replace(regex, substr);
 
@@ -38,20 +38,10 @@
 
     <!-- Game Date -->
     prettyDate = function(date) {
-        const options = { timeZone: 'America/Los_Angeles', timeZoneName: 'short' }
+        const options = { timeZone: 'America/Los_Angeles', timeZoneName: 'short', dateStyle: 'full', timeStyle: 'short' }
 
         let prettierDate = date.toLocaleString('en-US', options);
 
         return prettierDate;
-    }
-
-    prettyDay = function(date) {
-        const options = { timeZone: 'America/Los_Angeles', timeZoneName: 'short' }
-
-        let forcedPDT = date.toLocaleString('en-US', options);
-        let dateIfiedPDT = new Date(forcedPDT);
-        let something = weekdayNames[dateIfiedPDT.getDay()]
-
-        return something;
     }
 %>
