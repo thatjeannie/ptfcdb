@@ -13,10 +13,18 @@
             <div class="col-auto">
                 <div class="card shadow mb-4 mb-lg-5">
                     <div class="card-body px-5">
-                        <h2 class="text-thorns-red mb-0">
+                        <% /* %>
+                        <!-- <h2 class="text-thorns-red mb-0">
                             <span class="d-block display-1"><%= gameDateDay %></span>
                             <span class="d-block display-12"><%= gameDateMonth %> <%= game.date.getDate() %><%= gameDateOrdinal %></span>
                             <span class="d-block display-14"><%= prettyTime(gameTime) %></span>
+                        </h2> -->
+                        <% */ %>
+                        <h2 class="text-thorns-red mb-0">
+                            <%= gameDate %>
+                        </h2>
+                        <h2 class="text-thorns-red mb-0">
+                            <%= gameDate.toLocaleString() %>
                         </h2>
                     </div>
                 </div>
