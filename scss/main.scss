@@ -51,6 +51,12 @@ $theme-colors: map-merge($theme-colors, $custom-theme-colors);
 
 
 /* BEGIN CUSTOM STYLES */
+.navbar-brand {
+    img {
+        max-height: 32px;
+    }
+}
+
 .nav-link {
     &.active {
         color: $thornsRed;
@@ -58,7 +64,7 @@ $theme-colors: map-merge($theme-colors, $custom-theme-colors);
 }
 
 main {
-    min-height: calc(100vh - (56px + 146px));
+    min-height: calc(100vh - (60px + 146px));
     margin-top: 56px;
 }
 

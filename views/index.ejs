@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" prefix="og: http://ogp.me/ns#">
 <%- include('./partials/head.ejs') %>
 <body>
 <%- include('./weird/functions.ejs') %>
@@ -14,7 +14,11 @@
                 <div class="card shadow mb-4 mb-lg-5">
                     <div class="card-body px-5">
                         <h2 class="text-thorns-red mb-0">
-                            <span class="d-block display-1"><%= justDay(gameDate) %></span>
+                            <% if (gameDateStripTime === theNowStripTime) { %>
+                                <span class="d-block display-14 text-uppercase text-dope-purple">Today</span>
+                            <% } else { %>
+                                <span class="d-block display-1"><%= justDay(gameDate) %></span>
+                            <% } %>
                             <span class="d-block display-12"><%= justMonthDate(gameDate) %></span>
                             <span class="d-block display-14"><%= justYear(gameDate) %></span>
                         </h2>
