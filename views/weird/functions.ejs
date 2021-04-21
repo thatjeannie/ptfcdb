@@ -34,7 +34,8 @@
     }
 
     dateStripTime = function(date) {
-        const dateStripTime = date.toLocaleDateString();
+        const dateStringOptions = { timeZone: 'America/Los_Angeles' }
+        const dateStripTime = date.toLocaleDateString('en-US', dateStringOptions);
 
         return dateStripTime;
     }
