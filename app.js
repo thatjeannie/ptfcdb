@@ -75,8 +75,7 @@ app.get('/', (req, res) => {
                 ogType: '<meta property="og:type" content="website">',
                 ogURL: '<meta property="og:url" content="https://ptfcdb.com">',
                 ogImage: '<meta property="og:image" content="https://ptfcdb.com/images/ptfcdb.png">',
-                seasonMeta: 'Regular Season',
-                gameDate: result.date
+                seasonMeta: 'Regular Season'
             });
         })
         .catch((error) =>  {

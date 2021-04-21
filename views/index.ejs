@@ -14,7 +14,7 @@
             <div class="col-auto">
                 <div class="card shadow mb-4 mb-lg-5">
                     <div class="card-body px-5">
-                        <p class="lead">Game Date <%= dateStripTime(game.date) %></p>
+                        <p class="lead">Game Date <%= game.date.toLocaleDateString() %></p>
                         <p class="lead">Right Now <%= dateStripTime(rightNow) %></p>
                         <h2 class="text-thorns-red mb-0">
                             <% if (dateStripTime(game.date) === dateStripTime(rightNow)) { %>
