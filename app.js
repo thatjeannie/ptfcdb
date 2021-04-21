@@ -76,8 +76,6 @@ app.get('/', (req, res) => {
                 ogURL: '<meta property="og:url" content="https://ptfcdb.com">',
                 ogImage: '<meta property="og:image" content="https://ptfcdb.com/images/ptfcdb.png">',
                 seasonMeta: 'Regular Season',
-                gameDateStripTime: `${result.date.getMonth()+1}/${result.date.getDate()}/${result.date.getFullYear()}`,
-                theNowStripTime: `${dateFormatters.theNow.getMonth()+1}/${dateFormatters.theNow.getDate()}/${dateFormatters.theNow.getFullYear()}`,
                 gameDate: result.date
             });
         })
