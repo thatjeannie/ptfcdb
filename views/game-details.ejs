@@ -2,6 +2,7 @@
 <html lang="en" prefix="og: http://ogp.me/ns#">
 <%- include('./partials/head.ejs') %>
 <body>
+<%- include('./weird/functions.ejs') %>
 <% let now = new Date() %>
 
 <%- include('./partials/nav.ejs') %>
@@ -9,7 +10,14 @@
 <main class="container-xxl py-4 py-xl-5 mt-5">
     <section class="text-center">
         <h1 class="display-1 mb-2">Game Details</h1>
-        <p class="lead text-muted mb-5"><%= gameDateDay %>, <%= gameDateMonth %> <%= game.date.getDate() %><%= gameDateOrdinal %>, <%= game.date.getFullYear() %></p>
+        <p class="lead text-muted mb-5">
+            <% if (dateStripTime(game.date) === dateStripTime(now)) { %>
+                <span class="d-block text-uppercase text-dope-purple">Today</span>
+            <% } else { %>
+                <span><%= justDay(game.date) %>, </span>
+            <% } %>
+            <span><%= justMonthDate(game.date) %> <%= justTimeGD(game.date) %></span>
+        </p>
         <div class="row justify-content-around align-items-center mb-4">
             <div class="col-sm-4 col-lg-3"><p class="lead mb-0"><%= game.homeTeam %></p></div>
             <div class="col-sm-4 col-lg-2"><p class="h1 mx-4 mb-0">VS</p></div>
@@ -20,21 +28,21 @@
             <div class="col-auto">
                 <div class="card shadow mb-4 mb-lg-5">
                     <div class="card-body px-5">
-                        <% if (game.date > now) { %>
+                        <% if (game.date > theNowUTC) { %>
                             <h4 class="mb-0">This is a Future Game</h4>
                         <% } else { %>
                             <% if (game.thornsWinLossDraw !== "unknown" && game.finalScore !== "unknown") { %>
                                 <h2><%= game.thornsWinLossDraw %></h2>
                                 <p class="lead mb-1">Final Score: <%= game.finalScore %></p>
                             <% } else { %>
-                                <h5 class="mb-0">Game is in progress, or the database is not yet updated.</h5>
+                                <h4 class="mb-0">Game is in progress, or not yet updated.</h4>
                             <% } %>
                         <% } %>
                     </div>
                 </div>
             </div>
         </div>
-        <% if (game.date <= now) { %>
+        <% if (game.date <= theNowUTC) { %>
             <div class="row justify-content-around mb-4 mb-lg-5">
                 <div class="col-md-5">
                     <h4 class="mb-4">Goals:</h4>
