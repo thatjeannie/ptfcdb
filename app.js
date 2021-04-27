@@ -152,7 +152,8 @@ app.get('/games/2018/regularseason/:id', (req, res) => {
                 ogTitle: '<meta property="og:title" content="PTFC DB - 2018 Regular Season Game Details">',
                 ogType: '<meta property="og:type" content="website">',
                 ogURL: `<meta property="og:url" content="https://ptfcdb.com/games/2018/regularseason/${result.id}">`,
-                ogImage: '<meta property="og:image" content="https://ptfcdb.com/images/ptfcdb.png">'
+                ogImage: '<meta property="og:image" content="https://ptfcdb.com/images/ptfcdb.png">',
+                theNowUTC: dateFormatters.theNow
             });
         })
         .catch((error) =>  {
@@ -170,7 +171,8 @@ app.get('/games/2019/regularseason/:id', (req, res) => {
                 ogTitle: '<meta property="og:title" content="PTFC DB - 2019 Regular Season Game Details">',
                 ogType: '<meta property="og:type" content="website">',
                 ogURL: `<meta property="og:url" content="https://ptfcdb.com/games/2019/regularseason/${result.id}">`,
-                ogImage: '<meta property="og:image" content="https://ptfcdb.com/images/ptfcdb.png">'
+                ogImage: '<meta property="og:image" content="https://ptfcdb.com/images/ptfcdb.png">',
+                theNowUTC: dateFormatters.theNow
             });
         })
         .catch((error) =>  {
@@ -188,7 +190,8 @@ app.get('/games/2020/regularseason/:id', (req, res) => {
                 ogTitle: '<meta property="og:title" content="PTFC DB - 2020 Regular Season Game Details">',
                 ogType: '<meta property="og:type" content="website">',
                 ogURL: `<meta property="og:url" content="https://ptfcdb.com/games/2020/regularseason/${result.id}">`,
-                ogImage: '<meta property="og:image" content="https://ptfcdb.com/images/ptfcdb.png">'
+                ogImage: '<meta property="og:image" content="https://ptfcdb.com/images/ptfcdb.png">',
+                theNowUTC: dateFormatters.theNow
             });
         })
         .catch((error) =>  {
@@ -263,7 +266,8 @@ app.get('/games/2018/preseason/:id', (req, res) => {
                 ogTitle: '<meta property="og:title" content="PTFC DB - 2018 Preseason Game Details">',
                 ogType: '<meta property="og:type" content="website">',
                 ogURL: `<meta property="og:url" content="https://ptfcdb.com/games/2018/preseason/${result.id}">`,
-                ogImage: '<meta property="og:image" content="https://ptfcdb.com/images/ptfcdb.png">'
+                ogImage: '<meta property="og:image" content="https://ptfcdb.com/images/ptfcdb.png">',
+                theNowUTC: dateFormatters.theNow
             });
         })
         .catch((error) =>  {
@@ -281,7 +285,8 @@ app.get('/games/2019/preseason/:id', (req, res) => {
                 ogTitle: '<meta property="og:title" content="PTFC DB - 2019 Preseason Game Details">',
                 ogType: '<meta property="og:type" content="website">',
                 ogURL: `<meta property="og:url" content="https://ptfcdb.com/games/2019/preseason/${result.id}">`,
-                ogImage: '<meta property="og:image" content="https://ptfcdb.com/images/ptfcdb.png">'
+                ogImage: '<meta property="og:image" content="https://ptfcdb.com/images/ptfcdb.png">',
+                theNowUTC: dateFormatters.theNow
             });
         })
         .catch((error) =>  {
@@ -356,7 +361,8 @@ app.get('/games/2018/postseason/:id', (req, res) => {
                 ogTitle: '<meta property="og:title" content="PTFC DB - 2018 Postseason Game Details">',
                 ogType: '<meta property="og:type" content="website">',
                 ogURL: `<meta property="og:url" content="https://ptfcdb.com/games/2018/postseason/${result.id}">`,
-                ogImage: '<meta property="og:image" content="https://ptfcdb.com/images/ptfcdb.png">'
+                ogImage: '<meta property="og:image" content="https://ptfcdb.com/images/ptfcdb.png">',
+                theNowUTC: dateFormatters.theNow
             });
         })
         .catch((error) =>  {
@@ -374,7 +380,8 @@ app.get('/games/2019/postseason/:id', (req, res) => {
                 ogTitle: '<meta property="og:title" content="PTFC DB - 2019 Postseason Game Details">',
                 ogType: '<meta property="og:type" content="website">',
                 ogURL: `<meta property="og:url" content="https://ptfcdb.com/games/2019/postseason/${result.id}">`,
-                ogImage: '<meta property="og:image" content="https://ptfcdb.com/images/ptfcdb.png">'
+                ogImage: '<meta property="og:image" content="https://ptfcdb.com/images/ptfcdb.png">',
+                theNowUTC: dateFormatters.theNow
             });
         })
         .catch((error) =>  {
