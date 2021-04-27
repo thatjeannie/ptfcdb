@@ -23,6 +23,13 @@
                             <span class="d-block display-12"><%= justMonthDate(game.date) %></span>
                             <span class="d-block display-14"><%= justTime(game.date) %></span>
                         </h2>
+                        <% if (seasonMeta === 'Regular Season') { %>
+                            <p class="text-center mb-2"><a href="/games/2021/regularseason/<%= game._id %>">View Details</a></p>
+                        <% } else if (seasonMeta === 'Preseason') { %>
+                            <p class="text-center mb-2"><a href="/games/2021/preseason/<%= game._id %>">View Details</a></p>
+                        <% } else if (seasonMeta === 'Postseason') { %>
+                            <p class="text-center mb-2"><a href="/games/2021/postseason/<%= game._id %>">View Details</a></p>
+                        <% } %>
                     </div>
                 </div>
             </div>
