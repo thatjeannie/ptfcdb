@@ -156,10 +156,40 @@
             "dateLocal": "2021-04-21T20:00:00-08:00",
             "homeTeam": "Portland Thorns FC",
             "awayTeam": "OL Reign",
-            "thornsWinLossDraw": "unknown",
-            "finalScore": "unknown",
-            "goals": null,
-            "infractions": null,
+            "thornsWinLossDraw": "Win",
+            "finalScore": "2-0",
+            "goals": [
+                {
+                    "team": "Portland Thorns FC",
+                    "player": "Lindsey Horan",
+                    "minute": "17'",
+                    "assistedBy": "",
+                    "pk": false,
+                    "ownGoal": false
+                },
+                {
+                    "team": "Portland Thorns FC",
+                    "player": "Simone Charley",
+                    "minute": "46'",
+                    "assistedBy": "",
+                    "pk": false,
+                    "ownGoal": false
+                }
+            ],
+            "infractions": [
+                {
+                    "team": "OL Reign",
+                    "player": "Amber Brooks",
+                    "minute": "65'",
+                    "booked": "Yellow Card"
+                },
+                {
+                    "team": "Portland Thorns FC",
+                    "player": "Lindsey Horan",
+                    "minute": "72'",
+                    "booked": "Yellow Card"
+                }
+            ],
             "stadium": "Providence Park",
             "attendance": 0,
             "referee": "",

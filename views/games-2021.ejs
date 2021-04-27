@@ -2,6 +2,7 @@
 <html lang="en" prefix="og: http://ogp.me/ns#">
 <%- include('./partials/head.ejs') %>
 <body>
+<%- include('./weird/functions.ejs') %>
 <% let now = new Date() %>
 
 <%- include('./partials/nav.ejs') %>
@@ -50,23 +51,31 @@
                                     <div class="col-sm-4"><p class="lead mb-0"><%= game.awayTeam %></p></div>
                                 </div>
                                 <div class="text-center">
-                                    <% if (game.date > now) { %>
+                                    <% if (game.date > theNowUTC) { %>
                                         <p class="h4 mb-0">This is a Future Game</p>
                                     <% } else { %>
                                         <% if (game.thornsWinLossDraw !== "unknown" && game.finalScore !== "unknown") { %>
                                             <p class="h4"><%= game.thornsWinLossDraw %></p>
                                             <p class="lead"><%= game.finalScore %></p>
                                         <% } else { %>
-                                            <p class="h6 mb-0">Game is in progress.</p>
+                                            <p class="h4 mb-0">Game is in progress, or not yet updated.</p>
                                         <% } %>
                                     <% } %>
                                 </div>
+                                <p class="text-muted">
+                                    <% if (dateStripTime(game.date) === dateStripTime(now)) { %>
+                                        <span class="d-block text-uppercase text-dope-purple">Today</span>
+                                    <% } else { %>
+                                        <span><%= justDay(game.date) %>, </span>
+                                    <% } %>
+                                    <span><%= justMonthDate(game.date) %> <%= justTime(game.date) %></span>
+                                </p>
                                 <% if (seasonMeta === 'Regular Season') { %>
                                     <p class="text-center mb-0"><a href="/games/2021/regularseason/<%= game._id %>">View Details</a></p>
                                 <% } else if (seasonMeta === 'Preseason') { %>
                                     <p class="text-center mb-0"><a href="/games/2021/preseason/<%= game._id %>">View Details</a></p>
                                 <% } else if (seasonMeta === 'Postseason') { %>
-                                    <p class=text-center "mb-0"><a href="/games/2021/postseason/<%= game._id %>">View Details</a></p>
+                                    <p class="text-center mb-0"><a href="/games/2021/postseason/<%= game._id %>">View Details</a></p>
                                 <% } %>
                             </div>
                         </div>

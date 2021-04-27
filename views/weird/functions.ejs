@@ -24,13 +24,28 @@
 
         return gameMonthDate;
     }
-    justYear = function(date) {
+    justTime = function(date) {
         const newLocalDate = localDate(date);
         const datePieces = newLocalDate.split(', ');
-        let gameYear = datePieces[2];
-        gameYear = gameYear.replace("2021 ", "");
+        let gameTime = datePieces[2];
+        gameTime = gameTime.replace("2021 ", "");
+        gameTime = gameTime.replace("2020 ", "");
+        gameTime = gameTime.replace("2019 ", "");
+        gameTime = gameTime.replace("2018 ", "");
 
-        return gameYear;
+        return gameTime;
+    }
+    justTimeGD = function(date) {
+        const newLocalDate = localDate(date);
+        const datePieces = newLocalDate.split(', ');
+        let gameTime = datePieces[2];
+        gameTime = gameTime.replace("2021 ", "2021, ");
+        gameTime = gameTime.replace("2020 ", "2020, ");
+        gameTime = gameTime.replace("2019 ", "2019, ");
+        gameTime = gameTime.replace("2018 ", "2018, ");
+        gameTime = gameTime.replace("at ", "");
+
+        return gameTime;
     }
 
     dateStripTime = function(date) {

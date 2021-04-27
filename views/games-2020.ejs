@@ -2,6 +2,8 @@
 <html lang="en" prefix="og: http://ogp.me/ns#">
 <%- include('./partials/head.ejs') %>
 <body>
+<%- include('./weird/functions.ejs') %>
+<% let now = new Date() %>
 
 <%- include('./partials/nav.ejs') %>
 
@@ -9,16 +11,6 @@
     <section class="text-center">
         <h1 class="display-1 mb-0">2020 Games</h1>
         <ul class="nav justify-content-center mb-5">
-            <% /* %>
-            <!-- <li class="nav-item">
-                <span class="nav-link">Preseason</span>
-                <% if (seasonMeta === 'Preseason') { %>
-                <a class="nav-link active" aria-current="page" href="/games/2020/preseason">Preseason</a>
-                <% } else { %>
-                <a class="nav-link" href="/games/2020/preseason">Preseason</a>
-                <% } %>
-            </li> -->
-            <% */ %>
             <li class="nav-item">
                 <% if (seasonMeta === 'Regular Season') { %>
                 <a class="nav-link active" aria-current="page" href="/games/2020/regularseason">Regular Season</a>
@@ -35,16 +27,6 @@
                     </svg>
                 </span>
             </li>
-            <% /* %>
-            <!-- <li class="nav-item">
-                <span class="nav-link">Postseason</span>
-                <% if (seasonMeta === 'Postseason') { %>
-                <a class="nav-link active" aria-current="page" href="/games/2020/postseason">Postseason</a>
-                <% } else { %>
-                <a class="nav-link" href="/games/2020/postseason">Postseason</a>
-                <% } %>
-            </li> -->
-            <% */ %>
         </ul>
         <div class="row g-3">
             <% if (games.length > 0) { %>
@@ -61,12 +43,16 @@
                                     <p class="h4"><%= game.thornsWinLossDraw %></p>
                                     <p class="lead"><%= game.finalScore %></p>
                                 </div>
+                                <p class="text-muted">
+                                    <span><%= justDay(game.date) %>, </span>
+                                    <span><%= justMonthDate(game.date) %> <%= justTime(game.date) %></span>
+                                </p>
                                 <% if (seasonMeta === 'Regular Season') { %>
                                     <p class="text-center mb-0"><a href="/games/2020/regularseason/<%= game._id %>">View Details</a></p>
                                 <% } else if (seasonMeta === 'Preseason') { %>
                                     <p class="text-center mb-0"><a href="/games/2020/preseason/<%= game._id %>">View Details</a></p>
                                 <% } else if (seasonMeta === 'Postseason') { %>
-                                    <p class=text-center "mb-0"><a href="/games/2020/postseason/<%= game._id %>">View Details</a></p>
+                                    <p class="text-center mb-0"><a href="/games/2020/postseason/<%= game._id %>">View Details</a></p>
                                 <% } %>
                             </div>
                         </div>

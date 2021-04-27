@@ -3,6 +3,9 @@ const path = require('path');
 const sassMiddleware = require('node-sass-middleware');
 const mongoose = require('mongoose');
 
+// For passing a current date (UTC) object to views dealing with the current season
+// Thusly, in a res.render() method:
+// theNowUTC: dateFormatters.theNow
 const dateFormatters = require('./utils/dates');
 
 const model2018Games = require('./connections/games2018');
@@ -149,10 +152,7 @@ app.get('/games/2018/regularseason/:id', (req, res) => {
                 ogTitle: '<meta property="og:title" content="PTFC DB - 2018 Regular Season Game Details">',
                 ogType: '<meta property="og:type" content="website">',
                 ogURL: `<meta property="og:url" content="https://ptfcdb.com/games/2018/regularseason/${result.id}">`,
-                ogImage: '<meta property="og:image" content="https://ptfcdb.com/images/ptfcdb.png">',
-                gameDateDay: dateFormatters.weekdayNames[result.date.getDay()],
-                gameDateMonth: dateFormatters.monthNames[result.date.getMonth()],
-                gameDateOrdinal: dateFormatters.ordinalOf(result.date.getDate())
+                ogImage: '<meta property="og:image" content="https://ptfcdb.com/images/ptfcdb.png">'
             });
         })
         .catch((error) =>  {
@@ -170,10 +170,7 @@ app.get('/games/2019/regularseason/:id', (req, res) => {
                 ogTitle: '<meta property="og:title" content="PTFC DB - 2019 Regular Season Game Details">',
                 ogType: '<meta property="og:type" content="website">',
                 ogURL: `<meta property="og:url" content="https://ptfcdb.com/games/2019/regularseason/${result.id}">`,
-                ogImage: '<meta property="og:image" content="https://ptfcdb.com/images/ptfcdb.png">',
-                gameDateDay: dateFormatters.weekdayNames[result.date.getDay()],
-                gameDateMonth: dateFormatters.monthNames[result.date.getMonth()],
-                gameDateOrdinal: dateFormatters.ordinalOf(result.date.getDate())
+                ogImage: '<meta property="og:image" content="https://ptfcdb.com/images/ptfcdb.png">'
             });
         })
         .catch((error) =>  {
@@ -191,10 +188,7 @@ app.get('/games/2020/regularseason/:id', (req, res) => {
                 ogTitle: '<meta property="og:title" content="PTFC DB - 2020 Regular Season Game Details">',
                 ogType: '<meta property="og:type" content="website">',
                 ogURL: `<meta property="og:url" content="https://ptfcdb.com/games/2020/regularseason/${result.id}">`,
-                ogImage: '<meta property="og:image" content="https://ptfcdb.com/images/ptfcdb.png">',
-                gameDateDay: dateFormatters.weekdayNames[result.date.getDay()],
-                gameDateMonth: dateFormatters.monthNames[result.date.getMonth()],
-                gameDateOrdinal: dateFormatters.ordinalOf(result.date.getDate())
+                ogImage: '<meta property="og:image" content="https://ptfcdb.com/images/ptfcdb.png">'
             });
         })
         .catch((error) =>  {
@@ -249,7 +243,8 @@ app.get('/games/2021/preseason', (req, res) => {
                 ogType: '<meta property="og:type" content="website">',
                 ogURL: '<meta property="og:url" content="https://ptfcdb.com/games/2021/preseason">',
                 ogImage: '<meta property="og:image" content="https://ptfcdb.com/images/ptfcdb.png">',
-                seasonMeta: 'Preseason'
+                seasonMeta: 'Preseason',
+                theNowUTC: dateFormatters.theNow
             });
         })
         .catch((error) =>  {
@@ -268,10 +263,7 @@ app.get('/games/2018/preseason/:id', (req, res) => {
                 ogTitle: '<meta property="og:title" content="PTFC DB - 2018 Preseason Game Details">',
                 ogType: '<meta property="og:type" content="website">',
                 ogURL: `<meta property="og:url" content="https://ptfcdb.com/games/2018/preseason/${result.id}">`,
-                ogImage: '<meta property="og:image" content="https://ptfcdb.com/images/ptfcdb.png">',
-                gameDateDay: dateFormatters.weekdayNames[result.date.getDay()],
-                gameDateMonth: dateFormatters.monthNames[result.date.getMonth()],
-                gameDateOrdinal: dateFormatters.ordinalOf(result.date.getDate())
+                ogImage: '<meta property="og:image" content="https://ptfcdb.com/images/ptfcdb.png">'
             });
         })
         .catch((error) =>  {
@@ -289,10 +281,7 @@ app.get('/games/2019/preseason/:id', (req, res) => {
                 ogTitle: '<meta property="og:title" content="PTFC DB - 2019 Preseason Game Details">',
                 ogType: '<meta property="og:type" content="website">',
                 ogURL: `<meta property="og:url" content="https://ptfcdb.com/games/2019/preseason/${result.id}">`,
-                ogImage: '<meta property="og:image" content="https://ptfcdb.com/images/ptfcdb.png">',
-                gameDateDay: dateFormatters.weekdayNames[result.date.getDay()],
-                gameDateMonth: dateFormatters.monthNames[result.date.getMonth()],
-                gameDateOrdinal: dateFormatters.ordinalOf(result.date.getDate())
+                ogImage: '<meta property="og:image" content="https://ptfcdb.com/images/ptfcdb.png">'
             });
         })
         .catch((error) =>  {
@@ -311,9 +300,7 @@ app.get('/games/2021/preseason/:id', (req, res) => {
                 ogType: '<meta property="og:type" content="website">',
                 ogURL: `<meta property="og:url" content="https://ptfcdb.com/games/2021/preseason/${result.id}">`,
                 ogImage: '<meta property="og:image" content="https://ptfcdb.com/images/ptfcdb.png">',
-                gameDateDay: dateFormatters.weekdayNames[result.date.getDay()],
-                gameDateMonth: dateFormatters.monthNames[result.date.getMonth()],
-                gameDateOrdinal: dateFormatters.ordinalOf(result.date.getDate())
+                theNowUTC: dateFormatters.theNow
             });
         })
         .catch((error) =>  {
@@ -369,10 +356,7 @@ app.get('/games/2018/postseason/:id', (req, res) => {
                 ogTitle: '<meta property="og:title" content="PTFC DB - 2018 Postseason Game Details">',
                 ogType: '<meta property="og:type" content="website">',
                 ogURL: `<meta property="og:url" content="https://ptfcdb.com/games/2018/postseason/${result.id}">`,
-                ogImage: '<meta property="og:image" content="https://ptfcdb.com/images/ptfcdb.png">',
-                gameDateDay: dateFormatters.weekdayNames[result.date.getDay()],
-                gameDateMonth: dateFormatters.monthNames[result.date.getMonth()],
-                gameDateOrdinal: dateFormatters.ordinalOf(result.date.getDate())
+                ogImage: '<meta property="og:image" content="https://ptfcdb.com/images/ptfcdb.png">'
             });
         })
         .catch((error) =>  {
@@ -390,10 +374,7 @@ app.get('/games/2019/postseason/:id', (req, res) => {
                 ogTitle: '<meta property="og:title" content="PTFC DB - 2019 Postseason Game Details">',
                 ogType: '<meta property="og:type" content="website">',
                 ogURL: `<meta property="og:url" content="https://ptfcdb.com/games/2019/postseason/${result.id}">`,
-                ogImage: '<meta property="og:image" content="https://ptfcdb.com/images/ptfcdb.png">',
-                gameDateDay: dateFormatters.weekdayNames[result.date.getDay()],
-                gameDateMonth: dateFormatters.monthNames[result.date.getMonth()],
-                gameDateOrdinal: dateFormatters.ordinalOf(result.date.getDate())
+                ogImage: '<meta property="og:image" content="https://ptfcdb.com/images/ptfcdb.png">'
             });
         })
         .catch((error) =>  {

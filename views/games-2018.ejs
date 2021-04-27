@@ -2,6 +2,8 @@
 <html lang="en" prefix="og: http://ogp.me/ns#">
 <%- include('./partials/head.ejs') %>
 <body>
+<%- include('./weird/functions.ejs') %>
+<% let now = new Date() %>
 
 <%- include('./partials/nav.ejs') %>
 
@@ -46,12 +48,16 @@
                                     <p class="h4"><%= game.thornsWinLossDraw %></p>
                                     <p class="lead"><%= game.finalScore %></p>
                                 </div>
+                                <p class="text-muted">
+                                    <span><%= justDay(game.date) %>, </span>
+                                    <span><%= justMonthDate(game.date) %> <%= justTime(game.date) %></span>
+                                </p>
                                 <% if (seasonMeta === 'Regular Season') { %>
                                     <p class="text-center mb-0"><a href="/games/2018/regularseason/<%= game._id %>">View Details</a></p>
                                 <% } else if (seasonMeta === 'Preseason') { %>
                                     <p class="text-center mb-0"><a href="/games/2018/preseason/<%= game._id %>">View Details</a></p>
                                 <% } else if (seasonMeta === 'Postseason') { %>
-                                    <p class=text-center "mb-0"><a href="/games/2018/postseason/<%= game._id %>">View Details</a></p>
+                                    <p class="text-center mb-0"><a href="/games/2018/postseason/<%= game._id %>">View Details</a></p>
                                 <% } %>
                             </div>
                         </div>
