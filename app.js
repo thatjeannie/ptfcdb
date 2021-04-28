@@ -219,6 +219,25 @@ app.get('/games/2020/regularseason/:id', (req, res) => {
         });
 });
 
+app.get('/games/2021/regularseason/:id', (req, res) => {
+    const id = req.params.id;
+    model2021Games.findById(id)
+        .then((result) => {
+            res.render('game-details', {
+                game: result,
+                title: 'PTFC DB - 2021 Regular Season Game Details',
+                ogTitle: '<meta property="og:title" content="PTFC DB - 2021 Regular Season Game Details">',
+                ogType: '<meta property="og:type" content="website">',
+                ogURL: `<meta property="og:url" content="https://ptfcdb.com/games/2021/regularseason/${result.id}">`,
+                ogImage: '<meta property="og:image" content="https://ptfcdb.com/images/ptfcdb.png">',
+                theNowUTC: dateFormatters.theNow
+            });
+        })
+        .catch((error) =>  {
+            console.log(error);
+        });
+});
+
 // Preseason (PreseasonGame)
 app.get('/games/2018/preseason', (req, res) => {
     model2018Preseason.find().sort({ date: 1 })
