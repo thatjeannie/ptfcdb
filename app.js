@@ -15,6 +15,7 @@ const model2019Games = require('./connections/games2019');
 const model2019Preseason = require('./connections/preseason2019');
 const model2019Postseason = require('./connections/postseason2019');
 const model2020Games = require('./connections/games2020');
+const model2021Games = require('./connections/games2021');
 const model2021Preseason = require('./connections/preseason2021');
 
 
@@ -134,6 +135,25 @@ app.get('/games/2020/regularseason', (req, res) => {
                 ogURL: '<meta property="og:url" content="https://ptfcdb.com/games/2020/regularseason">',
                 ogImage: '<meta property="og:image" content="https://ptfcdb.com/images/ptfcdb.png">',
                 seasonMeta: 'Regular Season'
+            });
+        })
+        .catch((error) =>  {
+            console.log(error);
+        });
+});
+
+app.get('/games/2021/regularseason', (req, res) => {
+    model2021Games.find().sort({ date: 1 })
+        .then((result) => {
+            res.render('games-2021', {
+                games: result,
+                title: 'PTFC DB - All 2021 Regular Season Games',
+                ogTitle: '<meta property="og:title" content="PTFC DB - All 2021 Regular Season Games">',
+                ogType: '<meta property="og:type" content="website">',
+                ogURL: '<meta property="og:url" content="https://ptfcdb.com/games/2021/regularseason">',
+                ogImage: '<meta property="og:image" content="https://ptfcdb.com/images/ptfcdb.png">',
+                seasonMeta: 'Regular Season',
+                theNowUTC: dateFormatters.theNow
             });
         })
         .catch((error) =>  {
@@ -435,9 +455,9 @@ app.get('/games/2019/postseason/:id', (req, res) => {
 // Add Regular Season Games
 // Uncomment connection details and route and some constants, adjust the year as needed
 // const gameSchema = require('./schemas/game');
-// const dbURI2020 = `${process.env.DATABASE_URL}/games-2020?retryWrites=true&w=majority`;
-// const conn2020Games = mongoose.createConnection(dbURI2020, { useNewUrlParser: true, useUnifiedTopology: true });
-// const Game = conn2020Games.model('Games', gameSchema);
+// const dbURI2021 = `${process.env.DATABASE_URL}/games-2021?retryWrites=true&w=majority`;
+// const conn2021Games = mongoose.createConnection(dbURI2021, { useNewUrlParser: true, useUnifiedTopology: true });
+// const Game = conn2021Games.model('Games', gameSchema);
 
 // app.get('/games/add-game', (req, res) => {
 //     const game = new Game({ /* insert game object here */ });
